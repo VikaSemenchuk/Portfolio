@@ -9,7 +9,7 @@ const Layout = () => {
         <>
             <Header />
             <Suspense fallback={<h1>Loading...</h1>}>
-                <main className="container mx-auto px-4">
+                <main className="flex-1 container mx-auto px-4">
                     <Outlet />
                 </main>
             </Suspense>

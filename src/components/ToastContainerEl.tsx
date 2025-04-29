@@ -3,7 +3,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const ToastContainerEl = () => {
   return (
-    <ToastContainer position="top-right" autoClose={4000} theme="colored" />
+    <ToastContainer position="top-right" autoClose={4000} theme="colored" pauseOnFocusLoss />
   );
 };
 export default ToastContainerEl;

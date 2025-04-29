@@ -1,6 +1,7 @@
 import { lazy } from "react";
-import { Navigate, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 
+import NotFoundPage from "../pages/NotFoundPage";
 import Layout from "../components/Layout/Layout";
 
 const LazyHomePage = lazy(() => (import("../pages/Home")))
@@ -13,7 +14,7 @@ const RoutesComponent = () => {
         <Route index element={<LazyHomePage />} />
         <Route path="projects" element={<LazyProjectsPage />} />
       </Route>
-      <Route path="*" element={<Navigate to="/" />} />
+      <Route path="*" element={<NotFoundPage/>} />
     </Routes>
   );
 }
