@@ -7,7 +7,7 @@ const Navigation = () => {
           <li>
             <Link
               to="/"
-              className="inline-block text-white font-semibold py-2 px-4 rounded hover:bg-blue-600"
+              className="inline-block font-semibold py-2 px-4 rounded "
             >
               Home
             </Link>
@@ -15,7 +15,7 @@ const Navigation = () => {
           <li>
             <Link
               to="/projects"
-              className="inline-block text-white font-semibold py-2 px-4 rounded hover:bg-blue-600"
+              className="inline-block font-semibold py-2 px-4 rounded "
             >
               Projects
             </Link>
@@ -23,7 +23,7 @@ const Navigation = () => {
           <li>
             <Link
               to="/path-to-it"
-              className="inline-block text-white font-semibold py-2 px-4 rounded hover:bg-blue-600"
+              className="inline-block font-semibold py-2 px-4 rounded "
             >
               Path to IT
             </Link>

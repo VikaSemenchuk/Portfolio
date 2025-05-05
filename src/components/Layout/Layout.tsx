@@ -6,16 +6,16 @@ import Footer from "./Footer";
 
 const Layout = () => {
     return (
-        <>
-            <Header />
-            <Suspense fallback={<h1>Loading...</h1>}>
-                <main className="flex-1 container mx-auto px-4">
-                    <Outlet />
-                </main>
-            </Suspense>
-            <Footer />
-        </>
-    )
+      <>
+        <Header />
+        <Suspense fallback={<h1>Loading...</h1>}>
+          <main className="flex-1 flex items-center justify-center container mx-auto px-4">
+            <Outlet />
+          </main>
+        </Suspense>
+        <Footer />
+      </>
+    );
 }
 
 export default Layout;
