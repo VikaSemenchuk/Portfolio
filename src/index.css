@@ -1,15 +1,27 @@
 @import "tailwindcss";
 
+
+
 :root {
 
-  --primary: #1F2937; 
+ /* --primary: #1F2937; 
   --secondary: #4B5563; 
   --background: #0F172A; 
   --header: #1E293B; 
   --footer: #1E293B; 
   --card: #1E293B; 
   --text: #F8FAFC; 
-  --accent: #60A5FA; 
+  --accent: #60A5FA;  */
+
+  --primary: #1F2937;
+    --secondary: #4B5563;
+  
+    --background: #F7FAFC;
+    --header: #E3F2F8;
+    --footer: #e0e9f3;
+    --card: #FFFFFF;
+    --text: #495060;
+    --accent: #3B82F6;
 
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -33,15 +45,30 @@
   text-align: center;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
-body {
-  background-color: var(--background);
-  color: var(--text);
 
+.dark {
+  --primary: #1F2937; 
+  --secondary: #4B5563; 
+  --background: #0F172A; 
+  --header: #1E293B; 
+  --footer: #1E293B; 
+  --card: #1E293B; 
+  --text: #F8FAFC; 
+  --accent: #60A5FA; 
+}
+body {
+  color: var(--text);
+  
 }
 
 header{
   background-color: var(--header);
+  
+}
 
+main {
+  background-color: var(--background);
+  
 }
 
 footer {
@@ -49,7 +76,7 @@ footer {
 }
 a {
   font-weight: 500;
-  color: --text
+  /* color: --text */
   /* text-decoration: inherit; */
   }
   a:hover {
@@ -81,7 +108,32 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
-@media (prefers-color-scheme: light) {
+/* @media (prefers-color-scheme: light) {
+  :root {
+
+ 
+
+    --primary: #1F2937;
+      --secondary: #4B5563;
+    
+      --background: #F7FAFC;
+      --header: #E3F2F8;
+      --footer: #e0e9f3;
+      --card: #FFFFFF;
+      --text: #495060;
+      --accent: #3B82F6;
+
+
+}
+body {
+  background: var(--background);
+  color: var(--text);
+  
+}
+
+} */
+
+/* @media (prefers-color-scheme: light) {
   :root {
     --primary: #1F2937;
     --secondary: #4B5563;
@@ -92,6 +144,15 @@ button:focus-visible {
     --card: #FFFFFF;
     --text: #495060;
     --accent: #3B82F6;
+
+     --primary: #1F2937; 
+  --secondary: #4B5563; 
+  --background: #0F172A; 
+  --header: #1E293B; 
+  --footer: #1E293B; 
+  --card: #1E293B; 
+  --text: #F8FAFC; 
+  --accent: #60A5FA; 
   }
 
 
@@ -101,4 +162,4 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
-}
+} */
