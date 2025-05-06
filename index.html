@@ -9,10 +9,37 @@
     <link rel="manifest" href="/site.webmanifest" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Semenchuk Viktoriia</title>
-    <link rel="stylesheet" href="/src/index.css">
+    <link rel="stylesheet" href="/src/index.css" />
+    <script>
+      function applySetting(key, defaultValue, applyFn) {
+        const saveValue = localStorage.getItem(key);
+        const valueToUse = saveValue || defaultValue;
+        applyFn(valueToUse);
+        if (!saveValue) localStorage.setItem(key, valueToUse);
+      }
+
+      applySetting(
+        "theme",
+        window.matchMedia?.("(prefers-color-scheme: dark)").matches
+          ? "dark"
+          : "light",
+        (theme) => {
+          document.documentElement.classList.toggle("dark", theme === "dark");
+        }
+      );
+
+      applySetting(
+        "language",
+        navigator.language.split("-")[0] || "en",
+        (lang) => {
+          document.documentElement.lang = lang;
+        }
+      );
+    </script>
   </head>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
+

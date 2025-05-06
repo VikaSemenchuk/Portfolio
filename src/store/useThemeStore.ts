@@ -3,10 +3,20 @@ import { persist } from 'zustand/middleware';
 
 import { ThemeState } from '../types/theme';
 
+import getStoredValue from '../utils/getStoredValue';
+
+
+function detectSystemTheme(): 'light' | 'dark' {
+    if (typeof window !== 'undefined') {
+      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    }
+    return 'light'; // fallback
+  }
+
 const useThemeStore = create<ThemeState> ()(
     persist (
         (set, get) => ({
-            theme: window.matchMedia('prefers-color-scheme: dark').matches ? 'dark' : 'light',
+            theme:  getStoredValue<'light' | 'dark'>('theme',['light', 'dark'], detectSystemTheme()),           
             setTheme: (theme) => {
                 set({theme});
                 document.documentElement.classList.toggle('dark', theme === 'dark');
