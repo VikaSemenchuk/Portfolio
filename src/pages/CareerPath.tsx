@@ -1,7 +1,10 @@
+import { useTranslation } from "react-i18next"
+
 const CareerPath = () => {
+  const {t} = useTranslation()
   return (
     <h1>
-      Here it's about my Career Transition to IT
+      {t('path-to-it-page')}
     </h1>
   )
 }
