@@ -1,25 +1,25 @@
 function getStoredValue<T extends string>(
-    key: string,
-    allowedValues: readonly T[],
-    defaultValue: T
-  ): T {
-    if (typeof window !== 'undefined') {
+  key: string,
+  allowedValues: readonly T[],
+  defaultValue: T
+): T {
+  if (typeof window !== 'undefined') {
+    try {
       const stored = localStorage.getItem(key);
       if (stored !== null) {
-        try {
-          const parsed = JSON.parse(stored);
-          if (allowedValues.includes(parsed)) {
-            return parsed as T;
-          }
-        } catch {
-          if (allowedValues.includes(stored as T)) {
-            return stored as T;
-          }
+        const parsed = JSON.parse(stored);
+        const storedValue = parsed?.state?.[key] ?? parsed;
+        
+        if (allowedValues.includes(storedValue)) {
+          return storedValue as T;
         }
       }
+    } catch (e) {
+      console.warn(`Could not parse localStorage key "${key}":`, e);
     }
-    return defaultValue;
   }
+  return defaultValue;
+}
 
 
 export default getStoredValue

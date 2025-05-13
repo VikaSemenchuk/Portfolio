@@ -7,11 +7,11 @@ const ThemeToggle = () => {
   return (
     <button
       onClick={toggleTheme}
-      className="p-2 rounded-full border border-gray-400 dark:border-gray-600 bg-white dark:bg-gray-800 text-xl transition-colors duration-300"
+      className="p-2 rounded-full text-xl bg-footer"
       aria-label="Toggle theme"
       title="Change Theme"
     >
-      {theme === 'dark' ? '🌞 ' : '🌙 '}
+      {theme === 'dark' ? ' 🌞 ' : ' 🌙 '}
     </button>
   );
 };

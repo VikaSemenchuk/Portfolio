@@ -9,32 +9,31 @@
     <link rel="manifest" href="/site.webmanifest" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Semenchuk Viktoriia</title>
-    <link rel="stylesheet" href="/src/index.css" />
+    <link rel="stylesheet" href="/src/styles/index.css" />
     <script>
-      function applySetting(key, defaultValue, applyFn) {
-        const saveValue = localStorage.getItem(key);
-        const valueToUse = saveValue || defaultValue;
-        applyFn(valueToUse);
-        if (!saveValue) localStorage.setItem(key, valueToUse);
-      }
-
-      applySetting(
-        "theme",
-        window.matchMedia?.("(prefers-color-scheme: dark)").matches
+      (function () {
+        const stored = localStorage.getItem("app-state");
+        const systemPrefersDark = window.matchMedia(
+          "(prefers-color-scheme: dark)"
+        ).matches
           ? "dark"
-          : "light",
-        (theme) => {
-          document.documentElement.classList.toggle("dark", theme === "dark");
-        }
-      );
+          : "light";
+        const systemLang = navigator.language.split("-")[0] || "en";
 
-      applySetting(
-        "language",
-        navigator.language.split("-")[0] || "en",
-        (lang) => {
-          document.documentElement.lang = lang;
+        if (!stored) {
+          const defaultState = {
+            state: { theme: systemPrefersDark, language: systemLang },
+          };
+          localStorage.setItem("app-state", JSON.stringify(defaultState));
         }
-      );
+
+        const { theme, language } = stored
+          ? JSON.parse(stored).state
+          : { theme: systemPrefersDark, language: systemLang };
+
+        document.documentElement.classList.toggle("dark", theme === "dark");
+        document.documentElement.lang = language;
+      })();
     </script>
   </head>
   <body>
@@ -42,4 +41,3 @@
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
-
