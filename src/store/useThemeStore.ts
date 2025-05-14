@@ -1,14 +1,15 @@
 import { create} from 'zustand';
 import { persist } from 'zustand/middleware';
 
-import { ThemeState } from '../types/theme';
+import { Theme } from '../types/theme'
+import { ThemeState } from '../types/interfaces/themeState';
 
 import getStoredValue from '../utils/getStoredValue';
 
 const useThemeStore = create<ThemeState> ()(
     persist (
         (set, get) => ({
-            theme:  getStoredValue<'light' | 'dark'>('theme',['light', 'dark'], 'light'),           
+            theme:  getStoredValue<Theme>('theme',['light', 'dark'], 'light'),           
             setTheme: (theme) => {
                 set({theme});
                 document.documentElement.classList.toggle('dark', theme === 'dark');

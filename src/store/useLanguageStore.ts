@@ -3,17 +3,14 @@ import { persist } from 'zustand/middleware';
 import i18n from '../i18n';
 import getStoredValue from '../utils/getStoredValue';
 
-type Language = 'en' | 'uk' | 'de';
+import { Language } from '../types/language'
+import { LanguageState } from '../types/interfaces/languageState'
 
-type LanguageState = {
-  language: Language;
-  setLanguage: (lang: Language) => void;
-};
 
 export const useLanguageStore = create<LanguageState>()(
   persist(
     (set) => ({
-      language: getStoredValue<'en' | 'uk' | 'de'>('language', ['en', 'uk', 'de'], 'en'),
+      language: getStoredValue<Language>('language', ['en', 'uk', 'de'], 'en'),
       setLanguage: (lang) => {
         i18n.changeLanguage(lang);
         document.documentElement.lang = lang;

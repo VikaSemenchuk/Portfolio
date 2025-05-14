@@ -10,6 +10,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@headlessui/react": "^2.2.3",
+    "@heroicons/react": "^2.2.0",
     "i18next": "^25.1.2",
     "lucide-react": "^0.507.0",
     "react": "^19.0.0",

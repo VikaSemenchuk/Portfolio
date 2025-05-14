@@ -1,34 +1,38 @@
 import { useTranslation } from "react-i18next";
-import { Link } from "react-router-dom"
+import { NavLink } from "react-router-dom"
 
 const Navigation = () => {
-    const {t} = useTranslation()
+  const {t} = useTranslation()
+  const linkClass = ({ isActive }: { isActive: boolean }) =>
+    `inline-block font-semibold py-2 px-4 rounded-xl transition-smooth ${
+      isActive ? "bg-footer" : "text hover:shadow"
+    }`;
     return (
       <nav>
         <ul className="flex justify-center items-center gap-2">
           <li>
-            <Link
+            <NavLink
               to="/"
-              className="inline-block font-semibold py-2 px-4 rounded "
+              className={linkClass}
             >
               {t("header-home")}
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link
+            <NavLink
               to="/projects"
-              className="inline-block font-semibold py-2 px-4 rounded "
+              className={linkClass}
             >
               {t("header-projects")}
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link
+            <NavLink
               to="/path-to-it"
-              className="inline-block font-semibold py-2 px-4 rounded "
+              className= {linkClass}
             >
               {t("header-path-to-it")}
-            </Link>
+            </NavLink>
           </li>
         </ul>
       </nav>
