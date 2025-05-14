@@ -1,7 +1,7 @@
 // import Logo from '../../assets/Logo.svg?react';
-import Logo from "./header_temp/Logo";
-import Navigation from "./header_temp/Navigation";
-import DocumentsAndEmail from "./header_temp/DocumentsAndEmail";
+import Logo from "./header/Logo";
+import Navigation from "./header/Navigation";
+import DocumentsAndEmail from "./header/DocumentsAndEmail";
 import ThemeToggle from "../ThemeToggle";
 import LanguageSwitcher from "../LanguageSwitcher";
 
