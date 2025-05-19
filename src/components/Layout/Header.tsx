@@ -13,7 +13,6 @@ const Header = () => {
           <Logo />
           <Navigation />
         </div>
-        
 
         <div className="flex gap-4">
         <DocumentsAndEmail />

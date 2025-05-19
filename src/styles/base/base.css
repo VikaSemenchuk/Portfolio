@@ -1,0 +1,35 @@
+@layer base {
+  body {
+    @apply bg-background text-text  text-center antialiased transition-smooth;
+    color-scheme: light dark;
+  }
+  header {
+    @apply fixed top-0 left-0 w-full z-50 p-4 transition-smooth shadow-xl bg-background;
+  }
+
+  main {
+    @apply pt-[80px] container mx-auto transition-smooth;
+  }
+
+  footer {
+    @apply w-full bg-footer text-text p-4 antialiased;
+  }
+
+  button {
+    @apply transition-smooth;
+    cursor: pointer;
+    font-family: inherit;
+  }
+
+  .section {
+    @apply my-5 py-4;
+  }
+}
+
+/* button:hover {
+      border-color: var(--accent);
+    }
+    button:focus,
+    button:focus-visible {
+      outline: 4px auto -webkit-focus-ring-color;
+    } */

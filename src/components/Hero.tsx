@@ -34,7 +34,7 @@ const Hero = () => {
               </a>
 
               <Link to="/about">
-                <button className="flex gap-0.5 items-center">
+                <button className="btn flex gap-0.5 items-center">
                   {t("hero.button-to-about")}
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </button>

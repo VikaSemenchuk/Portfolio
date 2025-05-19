@@ -1,0 +1,11 @@
+@layer components {
+  .btn {
+    @apply bg-accent text-footer p-3 rounded-full hover:bg-footer hover:text-text ;
+  }
+
+  .btn-secondary {
+    @apply flex items-center justify-between w-32 h-9 bg-footer text-text p-3 rounded-full shadow-md
+      hover:outline hover:outline-1 hover:outline-accent
+      focus:outline-accent hover:text-accent ;
+  }
+}

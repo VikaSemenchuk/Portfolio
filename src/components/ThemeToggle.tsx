@@ -12,17 +12,26 @@ const ThemeToggle = () => {
     <Switch
       checked={enabled}
       onChange={toggleTheme}
-      className={`group relative flex h-7 w-14 cursor-pointer rounded-full p-1 transition-colors
-        bg-text
-        focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-sky-500
-      `}
+      className="relative btn-secondary"
     >
-      <span
-        aria-hidden="true"
-        className={`pointer-events-none inline-block size-5 rounded-full bg-footer shadow-lg ring-0 transition-smooth
-          ${enabled ? 'translate-x-7' : 'translate-x-0'}
-        `}
-      />
+      {enabled ? (
+        <>
+          <span className=" text-text">Dark</span>
+
+          <span
+            aria-hidden="true"
+            className="theme-ball"
+          />
+        </>
+      ) : (
+        <>
+          <span
+            aria-hidden="true"
+            className="theme-ball"
+          />
+          <span className="text-text">Light</span>
+        </>
+      )}
     </Switch>
   );
 };

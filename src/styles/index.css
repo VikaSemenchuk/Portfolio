@@ -1,5 +1,10 @@
-@import "./theme.css";
-@import "./base.css";
+@import "./base/theme.css";
+@import "./base/base.css";
+@import "./base/typography.css";
+
+@import "./components/buttons.css";
+@import "./components/theme-toggle.css";
+
 @import "./utilities/transitions.css";
 
 @tailwind base;

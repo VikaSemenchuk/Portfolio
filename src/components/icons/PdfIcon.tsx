@@ -1,13 +1,13 @@
 const PdfIcon = (props: React.SVGProps<SVGSVGElement>) => {
     return (
       <svg
-        width="24"
+        width="26"
         height="24"
         viewBox="0 0 100 100"
         xmlns="http://www.w3.org/2000/svg"
         aria-label="PDF icon"
         role="img"
-        // className=" hover:text-red-600"
+        className=" hover:bg-shadow-2xl	"
         {...props}
       >
         <rect
@@ -17,19 +17,17 @@ const PdfIcon = (props: React.SVGProps<SVGSVGElement>) => {
           height="90"
           rx="13"
           fill="red"
-          // stroke="#eadede"
           stroke="currentColor"
-          strokeWidth="9"
+          strokeWidth="6"
         />
         <text
           x="50%"
-          y="50%"
+          y="55%"
           dominantBaseline="middle"
           textAnchor="middle"
-          fontSize="40"
+          fontSize="38"
           fontWeight="bold"
-          fill="#eadede"
-          fontFamily="Arial, sans-serif"
+          fill="currentColor"
         >
           PDF
         </text>
