@@ -17,9 +17,9 @@ const PdfIcon = (props: React.SVGProps<SVGSVGElement>) => {
           height="90"
           rx="13"
           fill="red"
-        //   stroke="#eadede"
-        //   stroke="currentColor"
-        //   strokeWidth="9"
+          // stroke="#eadede"
+          stroke="currentColor"
+          strokeWidth="9"
         />
         <text
           x="50%"

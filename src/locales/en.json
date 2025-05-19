@@ -1,13 +1,25 @@
 {
     "greeting": "Hello!",
-    "header-home": "Home",
-    "header-projects": "Projects",
-    "header-path-to-it": "Path to IT",
-    "header-documents": "Documents",
+    "documents": "CV & documents",
+    "header": {
+      "nav": {
+        "home": "Home",
+        "about": "About",
+        "projects": "Projects",
+        "path-to-it": "Path to IT"
+        
+      }
+    },
     "theme": "Theme",
     "language": "Language",
     "home-page": "It's Home Page",
     "projects-page": "It's Project's Page",
-    "path-to-it-page": " Here it's about my Career Transition to IT"
+    "path-to-it-page": " Here it's about my Career Transition to IT",
+    "hero": {
+      "photoAlt": "Photo of Viktoriia, web developer",
+      "title": "Fullstack developer with an engineering mindset",
+      "subtitle": "With a background in analytics, I’ve transitioned from finance to development. I work with JavaScript, TypeScript, React, and Node.js to build meaningful solutions",
+      "button-to-about": "Learn more" 
+    }
     
   }

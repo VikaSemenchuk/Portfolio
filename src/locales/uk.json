@@ -1,12 +1,24 @@
 {
     "greeting": "Привіт!",
-    "header-home": "Головна",
-    "header-projects": "Проєкти",
-    "header-path-to-it": "Шлях в ІТ",
-    "header-documents": "Документи",
+    "header": {
+        "nav": {
+            "home": "Головна",
+            "about": "Про мене",
+            "projects": "Проєкти",
+            "path-to-it": "Шлях в ІТ",
+            "documents": "Резюме та документи"
+          }
+    },
+    "documents": "Резюме та документи",
     "theme": "Тема",
     "language": "Мова",
     "home-page": "Це головна сторінка",
     "projects-page": "Це сторінка з проєктами",
-    "path-to-it-page": "Тут про мій шлях в ІТ"
+    "path-to-it-page": "Тут про мій шлях в ІТ",
+    "hero": {
+        "photoAlt": "Фото Вікторії, веброзробниці",
+        "title": "Fullstack-розробниця з інженерним мисленням",
+        "subtitle": "Маю аналітичний бекграунд і пройшла шлях від фінансів до розробки. Працюю з JavaScript, TypeScript, React, Node.js і створюю рішення, що приносять користь",
+        "button-to-about": "Дізнатися більше"
+      }
 }

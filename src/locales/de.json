@@ -1,12 +1,24 @@
 {
     "greeting": "Hallo!",
-    "header-home": "Startseite",
-    "header-projects": "Projekte",
-    "header-path-to-it": "Weg in die IT",
-    "header-documents": "Bewerbungsunterlagen",
+    "header": {
+        "nav": {
+            "home": "Startseite",
+            "about": "Über mich",
+            "projects": "Projekte",
+            "path-to-it": "Mein Weg in die IT",
+            "documents": "Bewerbungsunterlagen"
+        }
+    },
+    "documents": "Bewerbungsunterlagen",
     "theme": "Thema",
     "language": "Sprache",
     "home-page": "Das ist die Startseite",
     "projects-page": "Das ist die Projekteseite",
-    "path-to-it-page": "Hier geht es um meinen Weg in die IT"
+    "path-to-it-page": "Hier geht es um meinen Weg in die IT",
+    "hero": {
+        "photoAlt": "Foto von Viktoriia, Webentwicklerin",
+        "title": "Fullstack-Entwicklerin mit technischem Denken",
+        "subtitle": "Mit analytischem Hintergrund bin ich von der Finanzwelt in die Entwicklung gewechselt. Ich arbeite mit JavaScript, TypeScript, React und Node.js und entwickle sinnvolle Lösungen",
+        "button-to-about": "Mehr erfahren"
+    }
 }

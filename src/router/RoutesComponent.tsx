@@ -4,15 +4,17 @@ import { Route, Routes } from "react-router-dom";
 import NotFoundPage from "../pages/NotFoundPage";
 import Layout from "../components/Layout/Layout";
 
-const LazyHomePage = lazy(() => (import("../pages/Home")))
-const LazyProjectsPage = lazy(() => (import("../pages/Projects")))
-const LazyCareerPathPage = lazy(() => (import("../pages/CareerPath")))
+const LazyHomePage = lazy(() => (import("../pages/HomePage")))
+const LazyAboutPage = lazy(() => (import("../pages/AboutPage")))
+const LazyProjectsPage = lazy(() => (import("../pages/ProjectsPage")))
+const LazyCareerPathPage = lazy(() => (import("../pages/CareerPathPage")))
 
 const RoutesComponent = () => {
   return (
     <Routes>
       <Route path="/" element={<Layout />}>
         <Route index element={<LazyHomePage />} />
+        <Route path="about" element={<LazyAboutPage />} />
         <Route path="projects" element={<LazyProjectsPage />} />
         <Route path="path-to-it" element={<LazyCareerPathPage />} />
       </Route>

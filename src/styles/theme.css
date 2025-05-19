@@ -1,39 +1,49 @@
 :root {
-    --primary: #1f2937;
-    --secondary: #4b5563;
+    /* --primary: #1f2937; */
+    /* --secondary: #4b5563; */
     /* --background: #f7fafc; */
-    --background: #c3eafa;
-    --header: #e3f2f8;
-    --footer: #b3deef;
-    --card: #ffffff;
-    --text: #495060;
-    --accent: #3b82f6;
-    --btn: #6497e8;
+    --background: #F1E9C9;
+    /* --header: #e3f2f8; */
+    --footer: #D9D2B0;
+    /* --card: #ffffff; */
+    --text: #655247;
+    --accent: #F28B66;
+    /* --btn: #6497e8; */
     
     color-scheme: light dark;
    
     background-color: var(--background);
   
-    font-family: system-ui, Helvetica, Arial, sans-serif;
+    /* font-family: system-ui, Helvetica, Arial, sans-serif; */
+    font-family: "Inter", sans-serif;
     line-height: 1.5;
     font-weight: 400;
+   
   
     font-synthesis: none;
     text-rendering: optimizeLegibility;
     -moz-osx-font-smoothing: grayscale;
+
   }
+  /* header {
+    font-family: "Raleway", sans-serif;
+    font-size: 1.2em;
+    font-optical-sizing: auto;
+    font-weight: 900;
+ } */
   
   
   .dark {
-    --primary: #1f2937;
-    --secondary: #4b5563;
-    --background: #00191a;
+    /* --primary: #1f2937; */
+    /* --secondary: #4b5563; */
+    --background: #403332;
     --header: #1e293b;
-    --footer: #000e0f;
-    --card: #1e293b;
-    --text: #f8fafc;
-    --accent: #60a5fa;
-    --btn: #163c78;
+    /* --footer: #593A28; */
+    --footer: #655247;
+    /* --card: #1e293b; */
+    --text: #F1E9C9;
+    --accent: #F28B66;
+    /* --btn: #163c78; */
   }
   
   
