@@ -1,24 +1,92 @@
 {
-    "greeting": "Hallo!",
-    "header": {
-        "nav": {
-            "home": "Startseite",
-            "about": "Über mich",
-            "projects": "Projekte",
-            "path-to-it": "Mein Weg in die IT",
-            "documents": "Bewerbungsunterlagen"
-        }
-    },
-    "documents": "Bewerbungsunterlagen",
-    "theme": "Thema",
-    "language": "Sprache",
-    "home-page": "Das ist die Startseite",
-    "projects-page": "Das ist die Projekteseite",
-    "path-to-it-page": "Hier geht es um meinen Weg in die IT",
-    "hero": {
-        "photoAlt": "Foto von Viktoriia, Webentwicklerin",
-        "title": "Fullstack-Entwicklerin mit technischem Denken",
-        "subtitle": "Mit analytischem Hintergrund bin ich von der Finanzwelt in die Entwicklung gewechselt. Ich arbeite mit JavaScript, TypeScript, React und Node.js und entwickle sinnvolle Lösungen",
-        "button-to-about": "Mehr erfahren"
+  "greeting": "Hallo!",
+  "header": {
+    "nav": {
+      "home": "Startseite",
+      "about": "Über mich",
+      "projects": "Projekte",
+      "path-to-it": "Mein Weg in die IT",
+      "documents": "Bewerbungsunterlagen"
     }
+  },
+  "documents": "Bewerbungsunterlagen",
+  "theme": "Thema",
+  "language": "Sprache",
+  "home-page": "Das ist die Startseite",
+  "projects-page": "Das ist die Projekteseite",
+  "path-to-it-page": "Hier geht es um meinen Weg in die IT",
+  "hero": {
+    "photoAlt": "Foto von Viktoriia, Webentwicklerin",
+    "title": "Fullstack-Entwicklerin mit technischem Denken",
+    "subtitle": "Mit analytischem Hintergrund bin ich von der Finanzwelt in die Entwicklung gewechselt. Ich arbeite mit JavaScript, TypeScript, React und Node.js und entwickle sinnvolle Lösungen.",
+    "button-to-about": "Mehr erfahren"
+  },
+  "about-page": {
+  "title": "Über mich",
+  "intro": "Ich bin eine Fullstack-Entwicklerin am Anfang meiner Karriere, begeistert von Innovation, Teamarbeit und lebenslangem Lernen. Eine harmonische Arbeitsumgebung motiviert mich, und konstruktives Feedback sehe ich als eine Chance zu wachsen und gemeinsam bessere Ergebnisse zu erzielen.",
+  "contacts": {
+    "email": "Viktoriia.semenchuk.dev@gmail.com",
+    "github": "https://github.com/VikaSemenchuk",
+    "linkedin": "https://www.linkedin.com/in/viktoriia-semenchuk-fullstack-developer"
+  },
+  "skills": {
+    "tech-skills-title": "Technische Fähigkeiten",
+    "technical": [
+      "HTML5, CSS3 / SASS, responsives Layout",
+      "JavaScript, TypeScript, React",
+      "Rest API, Node.js, MongoDB, Mongoose",
+      "Vite, Parcel, Webpack",
+      "GIT"
+    ],
+    "soft-skills-title": "Soft Skills",
+    "soft": [
+      "Verantwortungsbewusstsein",
+      "Teamarbeit",
+      "Kommunikationsfähigkeit",
+      "Problemlösungsfähigkeiten"
+    ],
+    "languages-title": "Sprachen",
+    "languages": [
+      "Ukrainisch — Muttersprache",
+      "Deutsch — B2",
+      "Englisch — Mittelstufe"
+    ]
+  },
+  "education-title": "Ausbildung",
+  "education": [
+    {
+      "program": "Fullstack-Entwicklungskurs",
+      "institution": "GoIT, Kiew",
+      "dates": "08/2022 – 08/2023"
+    },
+    {
+      "program": "Master in Rechnungswesen",
+      "institution": "TNEU, Czernowitz",
+      "dates": "2007 – 2012"
+    }
+  ]
+}
+,
+   "my-projects": "Meine Projekte",
+  "all-projects": "Alle Projekte",
+   "projects": [
+    {
+      "title": "Your Pet / Backend",
+      "description": "Backend für Haustier-Service",
+      "stack": "Node.js, MongoDB, Mongoose, Swagger, Express, JWT",
+      "link": "https://github.com/VikaSemenchuk/yourPets-backend"
+    },
+    {
+      "title": "News",
+      "description": "Anpassbarer Nachrichten-Feed",
+      "stack": "HTML, SASS, JS, Rest API, AJAX, Parcel",
+      "link": "https://github.com/VikaSemenchuk/News"
+    },
+    {
+      "title": "Search Images",
+      "description": "Bildersuche über API",
+      "stack": "HTML, SASS, JS, Rest API, AJAX, Parcel",
+      "link": "https://github.com/VikaSemenchuk/goit-js-hw-11"
+    }
+  ]
 }

@@ -1,25 +1,91 @@
 {
-    "greeting": "Hello!",
-    "documents": "CV & documents",
-    "header": {
-      "nav": {
-        "home": "Home",
-        "about": "About",
-        "projects": "Projects",
-        "path-to-it": "Path to IT"
-        
-      }
-    },
-    "theme": "Theme",
-    "language": "Language",
-    "home-page": "It's Home Page",
-    "projects-page": "It's Project's Page",
-    "path-to-it-page": " Here it's about my Career Transition to IT",
-    "hero": {
-      "photoAlt": "Photo of Viktoriia, web developer",
-      "title": "Fullstack developer with an engineering mindset",
-      "subtitle": "With a background in analytics, I’ve transitioned from finance to development. I work with JavaScript, TypeScript, React, and Node.js to build meaningful solutions",
-      "button-to-about": "Learn more" 
+  "greeting": "Hi!",
+  "header": {
+    "nav": {
+      "home": "Home",
+      "about": "About",
+      "projects": "Projects",
+      "path-to-it": "Path to IT",
+      "documents": "CV & documents"
     }
-    
-  }
+  },
+  "documents": "CV & documents",
+  "theme": "Theme",
+  "language": "Language",
+  "home-page": "This is the home page",
+  "projects-page": "This is the projects page",
+  "path-to-it-page": "Here is my path to IT",
+  "hero": {
+    "photoAlt": "Photo of Viktoriia, web developer",
+    "title": "Fullstack developer with an engineering mindset",
+    "subtitle": "With an analytical background, I’ve transitioned from finance to development. I work with JavaScript, TypeScript, React, and Node.js to build meaningful solutions.",
+    "button-to-about": "Learn more"
+  },
+  "about-page": {
+    "title": "About me",
+    "intro": "I’m a full-stack developer at the beginning of my career, passionate about innovation, teamwork, and lifelong learning. A harmonious work environment motivates me, and I see constructive feedback as an opportunity to grow and achieve better results together.",
+    "contacts": {
+      "email": "Viktoriia.semenchuk.dev@gmail.com",
+      "github": "https://github.com/VikaSemenchuk",
+      "linkedin": "https://www.linkedin.com/in/viktoriia-semenchuk-fullstack-developer"
+    },
+    "skills": {
+      "tech-skills-title": "Tech Skills",
+      "technical": [
+        "HTML5, CSS3 / SASS, responsive layout",
+        "JavaScript, TypeScript, React",
+        "Rest API, Node.js, MongoDB, Mongoose",
+        "Vite, Parcel, Webpack",
+        "GIT"
+      ],
+      "soft-skills-title": "Soft Skills",
+      "soft": [
+        "Responsibility",
+        "Teamwork",
+        "Communication",
+        "Problem-solving"
+      ],
+      "languages-title": "Languages",
+      "languages": [
+        "Ukrainian — native",
+        "German — B2",
+        "English — intermediate"
+      ]
+    },
+    "education-title": "Education",
+    "education": [
+      {
+        "program": "Fullstack Developer Course",
+        "institution": "GoIT, Kyiv",
+        "dates": "08/2022 – 08/2023"
+      },
+      {
+        "program": "Master’s in Accounting",
+        "institution": "TNEU, Chernivtsi",
+        "dates": "2007 – 2012"
+      }
+    ]
+  },
+   "my-projects": "My Projects",
+  "all-projects": "All Projects",
+   "projects": [
+    {
+      "title": "Your Pet / Backend",
+      "description": "Backend for pet service",
+      "stack": "Node.js, MongoDB, Mongoose, Swagger, Express, JWT",
+      "link": "https://github.com/VikaSemenchuk/yourPets-backend"
+    },
+    {
+      "title": "News",
+      "description": "Responsive news feed",
+      "stack": "HTML, SASS, JS, Rest API, AJAX, Parcel",
+      "link": "https://github.com/VikaSemenchuk/News"
+    },
+    {
+      "title": "Search Images",
+      "description": "Image search via API",
+      "stack": "HTML, SASS, JS, Rest API, AJAX, Parcel",
+      "link": "https://github.com/VikaSemenchuk/goit-js-hw-11"
+    }
+  ]
+}
