@@ -7,16 +7,16 @@ import MobileMenu from "./header/BurgerMenu";
 const Header = () => {
   return (
     <header>
-      <div className="container flex justify-between items-center ">
+      <div className="container flex justify-between items-center h-16">
 
-        <div className="flex items-center gap-8">
+        <div className=" flex items-center gap-6 lg:gap-8">
           <Logo />
           <div className="hidden md:block">
             <Navigation />
           </div>
         </div>
 
-        <div className="hidden md:flex gap-4">
+        <div className="hidden md:flex gap-3 lg:gap-4">
           <LanguageSwitcher />
           <ThemeToggle />
         </div>

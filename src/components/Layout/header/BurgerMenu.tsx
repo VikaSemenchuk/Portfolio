@@ -1,45 +1,22 @@
-// src/components/Layout/header/BurgerMenu.tsx
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-// import { NavLink } from 'react-router-dom';
 import { AnimatePresence, motion } from 'framer-motion';
 import { FileText, Menu, X } from 'lucide-react';
 
 import ThemeToggle from '../../ThemeToggle';
-// import DocumentsAndEmail from './DocumentsAndEmail';
-// import PdfIcon from '../../icons/PdfIcon';
-// import { useLanguageStore } from '../../../store/useLanguageStore';
-// import { languages } from '../../../constants/languages';
 import Navigation from './Navigation';
 import LanguageSwitcher from '../../LanguageSwitcher';
-// import DocumentsDownload from './DocumentsDownload';
 
 const MobileMenu = () => {
   const { t } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
-  // const [isLangOpen, setIsLangOpen] = useState(false);
-
-  // const selectedLang = useLanguageStore((state) => state.language);
-  // const setLanguage = useLanguageStore((state) => state.setLanguage);
-  // const { i18n } = useTranslation();
-
-  // const selected = languages.find((l) => l.code === selectedLang) || languages[0];
-  // const otherLanguages = languages.filter((l) => l.code !== selectedLang);
-
-
 
   const toggleMenu = () => setIsOpen(!isOpen);
   const closeMenu = () => setIsOpen(false);
 
-  // const handleChange = (lang: typeof selected) => {
-  //   i18n.changeLanguage(lang.code);
-  //   setLanguage(lang.code);
-  //   setIsLangOpen(false);
-  // };
-
   return (
-    <div className="md:hidden">
-      {/* Burger Button */}
+    <div className="flex items-center justify-between md:hidden">
+                  
       <button
         onClick={toggleMenu}
         className="p-2 rounded-lg hover:bg-footer/50 transition-colors"
@@ -108,9 +85,7 @@ const MobileMenu = () => {
                 </div>
               </div>
 
-              {/* Footer with controls */}
               <div className="p-6 border-t border-footer/20 space-y-4">
-                {/* Theme and Language controls in one row */}
                 <div className="flex items-center justify-end gap-3">
                   <ThemeToggle />
                   <div className="relative">

@@ -17,11 +17,11 @@ const ThemeToggle = () => {
       checked={enabled}
       onChange={toggleTheme}
       onKeyDown={handleKeyDownTheme}
-      className="btn-control md:min-w-[120px] group relative"
+      className="btn-control  group relative"
       
     >
 
-      <div className="hidden md:flex items-center justify-between w-full">
+      <div className="hidden lg:flex items-center justify-between w-full">
         {enabled ? (
           <>
             <span className="text-text font-medium">Dark</span>
@@ -35,7 +35,7 @@ const ThemeToggle = () => {
         )}
       </div>
 
-      <div className={`md:hidden theme-toggle-mobile ${enabled ? "dark" : ""}`}>
+      <div className={`lg:hidden theme-toggle-mobile ${enabled ? "dark" : ""}`}>
         <span aria-hidden="true" className="theme-ball bg-text" />
       </div>
 

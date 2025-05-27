@@ -126,8 +126,8 @@ export default function LanguageSwitcher() {
         aria-expanded={isOpen}
         aria-label={`Current language: ${selected.label}. Press Enter or Space to open language menu`}
       >
-        <span className="hidden md:inline ">{selected.label}</span>
-        <span className="md:hidden">
+        <span className="hidden lg:inline ">{selected.label}</span>
+        <span className="lg:hidden">
           {
             languageShortLabels[
             selected.code as keyof typeof languageShortLabels
@@ -166,8 +166,8 @@ export default function LanguageSwitcher() {
                 aria-label={`Switch to ${lang.label}`}
                 tabIndex={focusedIndex === index ? 0 : -1}
               >
-                <span className="hidden md:inline">{lang.label}</span>
-                <span className="md:hidden">
+                <span className="hidden lg:inline">{lang.label}</span>
+                <span className="lg:hidden">
                   {
                     languageShortLabels[
                     lang.code as keyof typeof languageShortLabels
