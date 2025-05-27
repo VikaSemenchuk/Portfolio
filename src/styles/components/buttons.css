@@ -14,11 +14,11 @@
             shadow-sm border border-border
            hover:border-accent hover:text-accent focus:outline-none focus:ring-2 
            focus:ring-accent focus:ring-opacity-50 transition-all
-           min-w-[80px] lg:min-w-[140px]
-            h-9 md:h-10 lg:h-[2.5rem]
+           min-w-[70px] lg:min-w-[140px]
+            h-8 lg:h-[2.5rem]
            text-xs md:text-sm lg:text-base;
   }
-  
+
   .btn-secondary {
     @apply flex items-center justify-center 
            bg-surface hover:bg-footer text-text px-3 py-2 rounded-lg 

@@ -1,6 +1,6 @@
 @layer components {
   .theme-ball {
-    @apply inline-block size-6 rounded-full shadow-lg transition-all duration-300;
+    @apply inline-block size-[1.2rem] lg:size-6 rounded-full shadow-lg transition-all duration-300;
   }
 
   .theme-toggle-mobile {
@@ -12,7 +12,7 @@
   }
 
   .theme-toggle-mobile.dark .theme-ball {
-    transform: translateY(-50%) translateX(calc(100% + 0.4rem)) ; 
+    transform: translateY(-50%) translateX(calc(100% + 0.5rem)) ; 
   }
 
   .language-switcher {
