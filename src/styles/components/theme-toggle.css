@@ -1,5 +1,0 @@
-@layer components {
-  .theme-ball {
-    @apply inline-block size-6 rounded-full bg-text shadow-lg transition-smooth;
-  }
-}

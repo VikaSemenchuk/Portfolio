@@ -1,0 +1,32 @@
+@layer base {
+  body {
+    @apply bg-background text-text antialiased transition-smooth;
+    color-scheme: light dark;
+    min-height: 100vh;
+  }
+
+  button {
+    @apply transition-smooth;
+    cursor: pointer;
+    font-family: inherit;
+  }
+
+  *:focus {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+  }
+
+  *:focus:not(:focus-visible) {
+    outline: none;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+}

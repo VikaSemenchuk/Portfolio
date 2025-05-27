@@ -1,0 +1,21 @@
+@layer base {
+  header {
+    @apply fixed top-0 left-0 w-full z-50 p-4 transition-smooth shadow-xl bg-background;
+  }
+
+  main {
+    @apply pt-20 container mx-auto transition-smooth;
+  }
+
+  footer {
+    @apply w-full bg-footer text-text p-4 antialiased border-t border-border;
+  }
+
+  .section {
+    @apply my-8 py-6;
+  }
+
+  .container {
+    @apply max-w-7xl flex justify-center mx-auto px-4 sm:px-6 lg:px-8;
+  }
+}

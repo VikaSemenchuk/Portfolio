@@ -1,24 +1,28 @@
-// import Logo from '../../assets/logo.svg?react';
 import Logo from "./header/Logo";
 import Navigation from "./header/Navigation";
-import DocumentsAndEmail from "./header/DocumentsAndEmail";
 import ThemeToggle from "../ThemeToggle";
 import LanguageSwitcher from "../LanguageSwitcher";
+import MobileMenu from "./header/BurgerMenu";
 
 const Header = () => {
   return (
     <header>
       <div className="container flex justify-between items-center ">
+
         <div className="flex items-center gap-8">
           <Logo />
-          <Navigation />
+          <div className="hidden md:block">
+            <Navigation />
+          </div>
         </div>
 
-        <div className="flex gap-4">
-        <DocumentsAndEmail />
+        <div className="hidden md:flex gap-4">
           <LanguageSwitcher />
           <ThemeToggle />
         </div>
+        
+        <MobileMenu />
+
       </div>
     </header>
   );

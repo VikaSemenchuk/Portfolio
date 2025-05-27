@@ -1,11 +1,18 @@
 @layer components {
   .btn {
-    @apply bg-accent text-footer p-3 rounded-full hover:bg-footer hover:text-text ;
+    @apply flex gap-0.5 justify-center items-center bg-accent text-background px-6 py-3 rounded-full font-medium 
+           hover:bg-accent-hover hover:scale-105 focus:outline-none focus:ring-2 
+           focus:ring-accent focus:ring-opacity-50 active:scale-95 transition-all
+           min-w-[100px] max-w-[280px] h-[2.5rem];
   }
 
-  .btn-secondary {
-    @apply flex items-center justify-between w-32 h-9 bg-footer text-text p-3 rounded-full shadow-md
-      hover:outline hover:outline-1 hover:outline-accent
-      focus:outline-accent hover:text-accent ;
+  .btn-control {
+    @apply flex items-center justify-center h-[2.5rem] 
+           bg-surface text-text px-3 py-2 rounded-full shadow-sm border border-border
+           hover:border-accent hover:text-accent focus:outline-none focus:ring-2 
+           focus:ring-accent focus:ring-opacity-50 transition-all
+           min-w-[100px] md:min-w-[140px];
   }
+
+
 }

@@ -73,19 +73,25 @@
       "title": "Your Pet / Backend",
       "description": "Backend для сервісу домашніх тварин",
       "stack": "Node.js, MongoDB, Mongoose, Swagger, Express, JWT",
-      "link": "https://github.com/VikaSemenchuk/yourPets-backend"
+      "link": "https://github.com/VikaSemenchuk/yourPets-backend",
+      "image": "/projects/pets.png"
+
     },
     {
       "title": "News",
       "description": "Адаптивна стрічка новин",
       "stack": "HTML, SASS, JS, Rest API, AJAX, Parcel",
-      "link": "https://github.com/VikaSemenchuk/News"
+      "link": "https://github.com/VikaSemenchuk/News",
+      "image": "/projects/news.png"
+
     },
     {
       "title": "Search Images",
       "description": "Пошук зображень через API",
       "stack": "HTML, SASS, JS, Rest API, AJAX, Parcel",
-      "link": "https://github.com/VikaSemenchuk/goit-js-hw-11"
+      "link": "https://github.com/VikaSemenchuk/goit-js-hw-11",
+      "image": "/projects/images.png"
+
     }
   ]
 }

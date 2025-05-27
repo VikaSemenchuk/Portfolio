@@ -1,0 +1,29 @@
+@layer components {
+   .nav-link {
+    @apply relative block w-full text-left py-4 px-0 text-lg font-medium text-text
+           border-b border-border last:border-b-0
+           hover:text-accent focus:text-accent focus:outline-none transition-all duration-300
+           md:inline-block md:w-auto md:text-center md:py-3 md:px-4 md:text-base md:border-b-0 md:rounded-lg;
+           
+  }
+
+  .nav-link::after {
+    content: '';
+    @apply absolute h-0.5 bg-accent scale-x-0 origin-left transition-transform duration-300
+           bottom-0 left-0 right-0
+           md:bottom-0 md:left-4 md:right-4;
+  }
+
+  .nav-link:hover::after,
+  .nav-link:focus::after {
+    @apply scale-x-100;
+  }
+
+  .nav-link--active {
+    @apply text-accent;
+  }
+
+  .nav-link--active::after {
+    @apply scale-x-100;
+  }
+}

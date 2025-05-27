@@ -1,0 +1,47 @@
+@media (prefers-reduced-motion: reduce) {
+  .transition-smooth,
+  .nav-link::after,
+  .theme-ball {
+    @apply transition-none;
+  }
+
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+@media (prefers-contrast: high) {
+  :root {
+    --border: currentColor;
+    --shadow: rgba(0, 0, 0, 0.5);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not(.light) {
+    --background: #1a1816;
+    --surface: #252321;
+    --text: #f5f3f0;
+    --accent: #8fb069;
+  }
+}
+
+@layer utilities {
+  .sr-only {
+    @apply absolute w-px h-px p-0 -m-px overflow-hidden whitespace-nowrap border-0;
+    clip: rect(0, 0, 0, 0);
+  }
+
+  .sr-only:focus {
+    @apply static w-auto h-auto p-1 m-0 overflow-visible whitespace-normal;
+    clip: auto;
+  }
+
+  .skip-link {
+    @apply sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 
+           focus:bg-accent focus:text-background focus:px-4 focus:py-2 focus:rounded
+           focus:z-50 focus:font-medium;
+  }
+}
