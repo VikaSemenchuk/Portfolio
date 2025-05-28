@@ -7,6 +7,7 @@ import Layout from "../components/Layout/Layout";
 const LazyHomePage = lazy(() => (import("../pages/HomePage")))
 const LazyAboutPage = lazy(() => (import("../pages/AboutPage")))
 const LazyProjectsPage = lazy(() => (import("../pages/ProjectsPage")))
+const LazyProjectDetailPage = lazy(() => import("../pages/ProjectDetailsPage"));
 const LazyCareerPathPage = lazy(() => (import("../pages/CareerPathPage")))
 
 const RoutesComponent = () => {
@@ -16,6 +17,7 @@ const RoutesComponent = () => {
         <Route index element={<LazyHomePage />} />
         <Route path="about" element={<LazyAboutPage />} />
         <Route path="projects" element={<LazyProjectsPage />} />
+        <Route path="projects/:id" element={<LazyProjectDetailPage />} />
         <Route path="path-to-it" element={<LazyCareerPathPage />} />
       </Route>
       <Route path="*" element={<NotFoundPage/>} />

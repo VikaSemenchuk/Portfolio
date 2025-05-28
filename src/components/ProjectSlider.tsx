@@ -50,6 +50,11 @@ const ProjectSlider: React.FC = () => {
             {t("all-projects")} →
           </button>
         </Link>
+         <Link to={`/projects/${'pets'}`}>
+          <button className="btn mt-6">
+            pets →
+          </button>
+        </Link>
       </div>
     </section>
   );
