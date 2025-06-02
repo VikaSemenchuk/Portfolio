@@ -1,7 +1,7 @@
 import NavItem from "./NavItem";
 
 const Navigation = () => {
- 
+
   return (
     <nav>
       <ul className="flex flex-col md:flex-row md:item-center gap-1 lg:gap-2">

@@ -17,6 +17,7 @@ const ProjectDetail = () => {
       <h1 className="text-2xl font-bold mb-2">Pets project</h1>
       {/* <h1 className="text-2xl font-bold mb-2">{project.title}</h1> */}
       <p>Hier is my Pets project</p>
+      
       {/* <p>{project.description}</p> */}
     </div>
   );

@@ -11,8 +11,8 @@ import {
   MapPin,
   Calendar
 } from "lucide-react";
-import ProjectSlider from "../components/ProjectSlider";
-import AnimeAvatar from "../assets/anime-avatar.png"; // Додайте ваше аніме фото в src/assets/
+import {ProjectSlider} from "@/components";
+import AnimeAvatar from "@/assets/anime-avatar.png"; 
 
 const AboutPage = () => {
   const { t } = useTranslation();

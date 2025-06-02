@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 
-import MyPhoto from "../assets/hero-photo.png"
+import MyPhoto from "@/assets/hero-photo.png"
 import { Link } from "react-router-dom";
 import { ArrowRight, FileText } from "lucide-react";
 // import { ArrowRight, ArrowDownToLine } from "lucide-react";

@@ -1,12 +1,12 @@
 import { create} from 'zustand';
 import { persist } from 'zustand/middleware';
 
-import { Theme } from '../types/theme'
-import { ThemeState } from '../types/interfaces/themeState';
+import { Theme } from '@/types'
+import { ThemeState } from '@/types/interfaces';
 
-import getStoredValue from '../utils/getStoredValue';
+import {getStoredValue} from '@/utils';
 
-const useThemeStore = create<ThemeState> ()(
+export const useThemeStore = create<ThemeState> ()(
     persist (
         (set, get) => ({
             theme:  getStoredValue<Theme>('theme',['light', 'dark'], 'light'),           
@@ -25,5 +25,3 @@ const useThemeStore = create<ThemeState> ()(
         }
     )
 )
-
-export default useThemeStore;

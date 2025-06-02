@@ -1,8 +1,5 @@
-import Logo from "./header/Logo";
-import Navigation from "./header/Navigation";
-import ThemeToggle from "../ThemeToggle";
-import LanguageSwitcher from "../LanguageSwitcher";
-import MobileMenu from "./header/BurgerMenu";
+import { Logo, Navigation, MobileMenu } from "@/components/Layout";
+import { ThemeToggle, LanguageSwitcher } from "@/components/UI";
 
 const Header = () => {
   return (
@@ -20,7 +17,7 @@ const Header = () => {
           <LanguageSwitcher />
           <ThemeToggle />
         </div>
-        
+
         <MobileMenu />
 
       </div>

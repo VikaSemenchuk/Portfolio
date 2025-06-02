@@ -3,9 +3,8 @@ import { useTranslation } from 'react-i18next';
 import { AnimatePresence, motion } from 'framer-motion';
 import { FileText, Menu, X } from 'lucide-react';
 
-import ThemeToggle from '../../ThemeToggle';
+import { ThemeToggle, LanguageSwitcher } from '@/components/UI';
 import Navigation from './Navigation';
-import LanguageSwitcher from '../../LanguageSwitcher';
 
 const MobileMenu = () => {
   const { t } = useTranslation();
@@ -16,7 +15,7 @@ const MobileMenu = () => {
 
   return (
     <div className="flex items-center justify-between md:hidden">
-                  
+
       <button
         onClick={toggleMenu}
         className="p-2 rounded-lg hover:bg-footer/50 transition-colors"

@@ -1,6 +1,5 @@
-import ThemeInitializer from './components/ThemeInitializer'
-import ToastContainerEl from './components/ToastContainerEl'
-import RoutesComponent from './router/RoutesComponent'
+import {RoutesComponent} from '@/router'
+import { ThemeInitializer, ToastContainerEl } from '@/components'
 
 const App = () => {
 

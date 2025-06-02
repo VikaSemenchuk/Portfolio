@@ -1,9 +1,10 @@
-import { useTranslation } from 'react-i18next';
-import { useLanguageStore } from '../store/useLanguageStore';
-import { languages } from '../constants/languages';
-import { AnimatePresence, motion } from 'framer-motion';
 import { useEffect, useRef, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { ChevronsDown } from "lucide-react";
+import { AnimatePresence, motion } from 'framer-motion';
+
+import { useLanguageStore } from '@/store';
+import { languages } from '@/constants';
 
 const languageShortLabels = {
   'en': 'EN',

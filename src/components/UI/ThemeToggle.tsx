@@ -1,6 +1,6 @@
 import { Switch } from '@headlessui/react';
 
-import useThemeStore from '../store/useThemeStore';
+import { useThemeStore } from '@/store';
 
 const ThemeToggle = () => {
   const theme = useThemeStore((state) => state.theme);
@@ -18,7 +18,7 @@ const ThemeToggle = () => {
       onChange={toggleTheme}
       onKeyDown={handleKeyDownTheme}
       className="btn-control  group relative"
-      
+
     >
 
       <div className="hidden lg:flex items-center justify-between w-full">

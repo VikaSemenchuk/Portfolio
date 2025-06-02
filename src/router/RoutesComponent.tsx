@@ -1,14 +1,14 @@
 import { lazy } from "react";
 import { Route, Routes } from "react-router-dom";
 
-import NotFoundPage from "../pages/NotFoundPage";
-import Layout from "../components/Layout/Layout";
+import { NotFoundPage } from "@/pages";
+import { Layout } from "@/components/Layout";
 
-const LazyHomePage = lazy(() => (import("../pages/HomePage")))
-const LazyAboutPage = lazy(() => (import("../pages/AboutPage")))
-const LazyProjectsPage = lazy(() => (import("../pages/ProjectsPage")))
-const LazyProjectDetailPage = lazy(() => import("../pages/ProjectDetailsPage"));
-const LazyCareerPathPage = lazy(() => (import("../pages/CareerPathPage")))
+const LazyHomePage = lazy(() => (import("@/pages/HomePage")))
+const LazyAboutPage = lazy(() => (import("@/pages/AboutPage")))
+const LazyProjectsPage = lazy(() => (import("@/pages/ProjectsPage")))
+const LazyProjectDetailPage = lazy(() => import("@/pages/ProjectDetailsPage"));
+const LazyCareerPathPage = lazy(() => (import("@/pages/CareerPathPage")))
 
 const RoutesComponent = () => {
   return (
@@ -20,7 +20,7 @@ const RoutesComponent = () => {
         <Route path="projects/:id" element={<LazyProjectDetailPage />} />
         <Route path="path-to-it" element={<LazyCareerPathPage />} />
       </Route>
-      <Route path="*" element={<NotFoundPage/>} />
+      <Route path="*" element={<NotFoundPage />} />
     </Routes>
   );
 }

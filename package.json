@@ -7,7 +7,10 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "check": "npm run lint && npm run build",
+    "deploy-ready": "npm run lint && npm run build && echo '✅ Ready for deploy! Run npm run preview to test'",
+    "full-check": "npm run lint && npm run build && echo '✅ Build successful!' && npm run preview"
   },
   "dependencies": {
     "@headlessui/react": "^2.2.3",
@@ -25,6 +28,7 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.21.0",
+    "@types/node": "^22.15.24",
     "@types/react": "^19.0.10",
     "@types/react-dom": "^19.0.4",
     "@vitejs/plugin-react": "^4.3.4",
