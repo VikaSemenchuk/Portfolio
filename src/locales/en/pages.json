@@ -1,0 +1,67 @@
+{
+  "home": {
+    "hero": {
+      "title": "Fullstack developer with an engineering mindset",
+      "subtitle": "With an analytical background, I've transitioned from finance to development. I work with JavaScript, TypeScript, React, and Node.js to build meaningful solutions.",
+      "photoAlt": "Photo of Viktoriia, web developer"
+    }
+  },
+  "about": {
+    "name": "Viktoriia Semenchuk",
+    "title": "About me",
+    "intro": "I'm a full-stack developer at the beginning of my career, passionate about innovation, teamwork, and lifelong learning. A harmonious work environment motivates me, and I see constructive feedback as an opportunity to grow and achieve better results together.",
+    "contacts": {
+      "email": "Viktoriia.semenchuk.dev@gmail.com",
+      "github": "https://github.com/VikaSemenchuk",
+      "linkedin": "https://www.linkedin.com/in/viktoriia-semenchuk-fullstack-developer"
+    },
+    "skills": {
+      "techTitle": "Tech Skills",
+      "technical": [
+        "HTML5, CSS3 / SASS, responsive layout",
+        "JavaScript, TypeScript, React", 
+        "Rest API, Node.js, MongoDB, Mongoose",
+        "Vite, Parcel, Webpack",
+        "GIT"
+      ],
+      "softTitle": "Soft Skills", 
+      "soft": [
+        "Responsibility",
+        "Teamwork",
+        "Communication",
+        "Problem-solving"
+      ],
+      "languagesTitle": "Languages",
+      "languages": [
+        "Ukrainian — native",
+        "German — B2",
+        "English — intermediate"
+      ]
+    },
+    "educationTitle": "Education",
+    "education": [
+      {
+        "program": "Fullstack Developer Course",
+        "institution": "GoIT, Kyiv",
+        "dates": "08/2022 – 08/2023"
+      },
+      {
+        "program": "Master's in Accounting", 
+        "institution": "TNEU, Chernivtsi",
+        "dates": "2007 – 2012"
+      }
+    ]
+  },
+  "projects": {
+    "title": "My Projects",
+    "subtitle": "Here are some of the projects I've worked on, showcasing my skills in web development and programming.",
+    "collaborate": {
+      "title": "Want to collaborate?",
+      "description": "I'm always open to discussing new opportunities and interesting projects. Let's build something amazing together!"
+    }
+  },
+  "career": {
+    "title": "My Path to IT", 
+    "content": "Here is my path to IT"
+  }
+}

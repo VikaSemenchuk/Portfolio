@@ -1,0 +1,67 @@
+{
+  "home": {
+    "hero": {
+      "title": "Fullstack-Entwicklerin mit technischem Denken",
+      "subtitle": "Mit einem analytischen Hintergrund bin ich vom Finanzwesen in die Entwicklung gewechselt. Ich arbeite mit JavaScript, TypeScript, React und Node.js, um sinnvolle Lösungen zu schaffen.",
+      "photoAlt": "Foto von Viktoriia, Webentwicklerin"
+    }
+  },
+  "about": {
+    "name": "Viktoriia Semenchuk",
+    "title": "Über mich",
+    "intro": "Ich bin eine angehende Fullstack-Entwicklerin, begeistert von Innovation, Teamarbeit und lebenslangem Lernen. Ein harmonisches Arbeitsumfeld motiviert mich, und konstruktives Feedback sehe ich als Chance, gemeinsam zu wachsen und bessere Ergebnisse zu erzielen.",
+    "contacts": {
+      "email": "Viktoriia.semenchuk.dev@gmail.com",
+      "github": "https://github.com/VikaSemenchuk",
+      "linkedin": "https://www.linkedin.com/in/viktoriia-semenchuk-fullstack-developer"
+    },
+    "skills": {
+      "techTitle": "Technische Fähigkeiten",
+      "technical": [
+        "HTML5, CSS3 / SASS, responsives Layout",
+        "JavaScript, TypeScript, React",
+        "Rest API, Node.js, MongoDB, Mongoose",
+        "Vite, Parcel, Webpack",
+        "GIT"
+      ],
+      "softTitle": "Soft Skills",
+      "soft": [
+        "Verantwortung",
+        "Teamarbeit",
+        "Kommunikation",
+        "Problemlösung"
+      ],
+      "languagesTitle": "Sprachen",
+      "languages": [
+        "Ukrainisch – Muttersprache",
+        "Deutsch – B2",
+        "Englisch – Mittelstufe"
+      ]
+    },
+    "educationTitle": "Ausbildung",
+    "education": [
+      {
+        "program": "Fullstack Developer Kurs",
+        "institution": "GoIT, Kyjiw",
+        "dates": "08/2022 – 08/2023"
+      },
+      {
+        "program": "Master in Rechnungswesen",
+        "institution": "TNEU, Czernowitz",
+        "dates": "2007 – 2012"
+      }
+    ]
+  },
+  "projects": {
+    "title": "Meine Projekte",
+    "subtitle": "Hier sind einige Projekte, an denen ich gearbeitet habe und die meine Fähigkeiten in der Webentwicklung zeigen.",
+    "collaborate": {
+      "title": "Möchtest du zusammenarbeiten?",
+      "description": "Ich bin immer offen für neue Möglichkeiten und spannende Projekte. Lass uns gemeinsam etwas Großartiges schaffen!"
+    }
+  },
+  "career": {
+    "title": "Mein Weg in die IT",
+    "content": "Hier ist mein Weg in die IT"
+  }
+}

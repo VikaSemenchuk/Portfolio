@@ -1,22 +1,64 @@
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 
-import en from './locales/en.json';
-import uk from './locales/uk.json';
-import de from './locales/de.json';
+import enCommon from '@/locales/en/common.json';
+import enNavigation from '@/locales/en/navigation.json';
+import enPages from '@/locales/en/pages.json';
+import enPetsProject from '@/locales/en/projects/pets.json';
+import enNewsProject from '@/locales/en/projects/news.json';
+import enImagesProject from '@/locales/en/projects/images.json';
+
+
+import ukCommon from '@/locales/uk/common.json';
+import ukNavigation from '@/locales/uk/navigation.json';
+import ukPages from '@/locales/uk/pages.json';
+import ukPetsProject from '@/locales/uk/projects/pets.json';
+import ukNewsProject from '@/locales/uk/projects/news.json';
+import ukImagesProject from '@/locales/uk/projects/images.json';
+
+
+import deCommon from '@/locales/de/common.json';
+import deNavigation from '@/locales/de/navigation.json';
+import dePages from '@/locales/de/pages.json';
+import dePetsProject from '@/locales/de/projects/pets.json';
+import deNewsProject from '@/locales/de/projects/news.json';
+import deImagesProject from '@/locales/de/projects/images.json';
+import { getStoredValue } from '@/utils';
+
+const currentLanguage = getStoredValue('language', ['en', 'uk', 'de'], 'en');
 
 i18n
   .use(initReactI18next)
   .init({
     resources: {
-      en: { translation: en },
-      uk: { translation: uk },
-      de: { translation: de },
+      en: {
+        common: enCommon,
+        navigation: enNavigation,
+        pages: enPages,
+        petsProject: enPetsProject,
+        newsProject: enNewsProject,
+        imagesProject: enImagesProject
+      },
+      uk: {
+        common: ukCommon,
+        navigation: ukNavigation,
+        pages: ukPages,
+        petsProject: ukPetsProject,
+        newsProject: ukNewsProject,
+        imagesProject: ukImagesProject
+      },
+      de: {
+        common: deCommon,
+        navigation: deNavigation,
+        pages: dePages,
+        petsProject: dePetsProject,
+        newsProject: deNewsProject,
+        imagesProject: deImagesProject
+      }
     },
     fallbackLng: 'en',
-    lng: localStorage.getItem("app-state")
-      ? JSON.parse(localStorage.getItem("app-state")!).state.language
-      : navigator.language.split("-")[0],
+    lng: currentLanguage,
+    
     
     interpolation: {
       escapeValue: false,

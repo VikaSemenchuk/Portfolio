@@ -1,0 +1,75 @@
+{
+  "id": "images",
+  "title": "Bildersuche",
+  "description": "Backend für einen Haustierdienst", 
+  "stack": "Node.js, MongoDB, Mongoose, Swagger, Express, JWT",
+  "link": "https://github.com/VikaSemenchuk/yourPets-backend",
+  "image": "/projects/images.png",
+  "featured": true,
+  "role": "Teamleiterin & Backend-Entwicklerin",
+  "detailed": {
+    "overview": "YourPets ist eine voll ausgestattete Webplattform zur Suche und Veröffentlichung von Anzeigen zur Haustieradoption, entwickelt als Abschlussprojekt des GoIT-Kurses. Das Projekt bringt Tierbesitzer, die ein neues Zuhause für ihre Tiere suchen, mit Menschen zusammen, die ein Haustier adoptieren möchten. Entwickelt mit modernen Technologien und auf Basis realer Geschäftsanforderungen.",
+    "myRole": "Ich leitete ein Team von mehr als 4 Entwickler:innen im GoIT-Abschlussprojekt, koordinierte die Arbeit zwischen Frontend und Backend, war verantwortlich für die Projektarchitektur, Code-Reviews, Aufgabenverteilung und Qualitätskontrolle. Ich entwickelte persönlich das Backend: REST API, MongoDB, Authentifizierung, Cloudinary-Integration. Das Projekt wurde gemäß den realen technischen Anforderungen und Branchenstandards umgesetzt.",
+    "technologies": {
+      "backend": [
+        "Node.js + Express.js — Serverseite und API",
+        "MongoDB + Mongoose — Datenbank und ODM",
+        "JWT — Authentifizierung und Autorisierung",
+        "bcrypt — Passwort-Hashing",
+        "Cloudinary — Bildspeicherung und -verarbeitung",
+        "Multer — Datei-Uploads"
+      ],
+      "architecture": [
+        "RESTful API mit durchdachter Endpunktstruktur",
+        "Middleware-Muster für Authentifizierung und Validierung",
+        "Zentrale Fehlerbehandlung",
+        "Paginierung zur Optimierung großer Listen",
+        "Suche & Filterung mit flexiblen Parametern"
+      ],
+      "dataManagement": [
+        "MongoDB-Aggregations-Pipeline für komplexe Abfragen",
+        "Schema-Design mit Validierung und Indizes",
+        "Datei-Upload mit automatischer Bildoptimierung",
+        "Datenbeziehungen zwischen Benutzer:innen, Tieren und Anzeigen"
+      ]
+    },
+    "features": [
+      {
+        "title": "Benutzersystem",
+        "description": "Registrierung und Anmeldung mit JWT-Tokens, Benutzerprofil mit Bearbeitungsfunktionen, Avatar-Upload und -Änderung, sichere Passwortspeicherung mit bcrypt"
+      },
+      {
+        "title": "Anzeigenverwaltung",
+        "description": "CRUD-Operationen für Tieranzeigen, Kategorien: Verkauf, zu verschenken, verloren-gefunden, Filterung nach Geschlecht, Alter, Standort, Suche nach Titel und Tierart"
+      },
+      {
+        "title": "Eigene Haustiere",
+        "description": "Hinzufügen eigener Haustiere, Fotogalerie, Informationen zu Alter, Art, Kommentare"
+      },
+      {
+        "title": "Zusätzliche Module",
+        "description": "Partnerorganisationen-Katalog, Tiernachrichten mit Suche, Paginierung für alle Listen"
+      }
+    ],
+    "achievements": [
+      "Leitung eines Teams von 4+ Entwickler:innen und Sicherstellung der Synchronisation von Frontend/Backend",
+      "Organisation des Code-Review-Prozesses und Etablierung von Qualitätsstandards",
+      "Gestaltung der Architektur des gesamten Projekts und Aufgabenverteilung",
+      "Implementierung eines komplexen Backends mit 15+ Endpunkten und Integrationen",
+      "Einhaltung von Fristen und erfolgreiche Produktbereitstellung",
+      "Erstellung einer umfassenden technischen Dokumentation und API-Spezifikation"
+    ],
+    "stats": {
+      "teamSize": "4+",
+      "endpoints": "15+",
+      "modules": "5",
+      "filterParams": "8+",
+      "coverage": "100%"
+    },
+    "codeExamples": {
+      "aggregation": "const pipeline = [\n  { $match: { category: \"sell\", sex: \"female\" } },\n  { $skip: skip },\n  { $limit: limit },\n  { $sort: { createdAt: -1 } }\n];\n\nconst noticesList = await Notice.aggregate(pipeline);",
+      "cloudinary": "const storage = new CloudinaryStorage({\n  cloudinary: cloudinary,\n  params: {\n    folder: \"petsshop\",\n    transformation: [{ width: 500, height: 500 }]\n  }\n});",
+      "middleware": "const authenticate = async (req, res, next) => {\n  const { authorization = '' } = req.headers;\n  const [bearer, token] = authorization.split(' ');\n  \n  if (bearer !== 'Bearer' || !token) {\n    return res.status(401).json({ message: \"Not authorized\" });\n  }\n  \n  try {\n    const { id } = jwt.verify(token, process.env.JWT_SECRET);\n    const user = await User.findById(id);\n    req.user = user;\n    next();\n  } catch (err) {\n    res.status(401).json({ message: \"Invalid token\" });\n  }\n};"
+    }
+  }
+}

@@ -1,24 +1,24 @@
 import { useTranslation } from "react-i18next";
 
 import MyPhoto from "@/assets/hero-photo.png"
+
 import { Link } from "react-router-dom";
 import { ArrowRight, FileText } from "lucide-react";
 // import { ArrowRight, ArrowDownToLine } from "lucide-react";
 
 const Hero = () => {
-  const { t } = useTranslation()
+  const { t: tPages } = useTranslation('pages')
+  const { t: tCommon } = useTranslation('common')
 
   return (
     <section className="section min-h-[80vh] flex items-center">
       <div className="container">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
-          <div
-            className="flex justify-center lg:justify-start order-1 lg:order-2" 
-          >
+          <div className="flex justify-center lg:justify-start order-1 lg:order-2">
             <div className="relative">
               <img
                 src={MyPhoto}
-                alt={t("hero.photoAlt")}
+                alt={tPages("home.hero.photoAlt")}
                 className=" w-64 h-80 sm:w-80 sm:h-96 lg:w-96 lg:h-[480px] xl:w-[420px] xl:h-[520px] 
                           rounded-full xl object-cover shadow-xl"
               />
@@ -27,11 +27,11 @@ const Hero = () => {
 
           <div className="text-center lg:text-left order-2 lg:order-1 space-y-6">
             <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight">
-              {t("hero.title")}
+              {tPages("home.hero.title")}
             </h1>
 
             <p className="text-lg sm:text-xl lg:text-2xl text-text-secondary max-w-2xl mx-auto lg:mx-0">
-              {t("hero.subtitle")}
+              {tPages("home.hero.subtitle")}
             </p>
 
             <div className="flex flex-col md:flex-row lg:flex-col  xl:flex-row  md:align-center  gap-4 justify-center lg:justify-start">
@@ -43,12 +43,12 @@ const Hero = () => {
               >
                 {/* <ArrowDownToLine className="mr-2 h-4 w-4" /> */}
                 <FileText className="mr-2 h-5 w-5" />
-                <span>{t("documents")}</span>
+                <span>{tCommon("buttons.cvDocuments")}</span>
               </a>
 
               <Link to="/about">
                 <button className="btn justify-start w-[240px]">
-                  {t("hero.button-to-about")}
+                  {tCommon("buttons.learnMore")}
                   <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                 </button>
               </Link>

@@ -4,10 +4,12 @@ import { AnimatePresence, motion } from 'framer-motion';
 import { FileText, Menu, X } from 'lucide-react';
 
 import { ThemeToggle, LanguageSwitcher } from '@/components/UI';
+
 import Navigation from './Navigation';
 
 const MobileMenu = () => {
-  const { t } = useTranslation();
+  const { t: tCommon } = useTranslation('common');
+  const { t: tNavigation } = useTranslation('navigation');
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => setIsOpen(!isOpen);
@@ -51,7 +53,7 @@ const MobileMenu = () => {
             >
               {/* Header with close button */}
               <div className="flex justify-between items-center p-6 border-b border-footer/20">
-                <h3 className="text-lg font-semibold">{t("header.nav.menu", "Menu")}</h3>
+                <h3 className="text-lg font-semibold">{tNavigation("header.menu")}</h3>
                 <button
                   onClick={closeMenu}
                   className="p-2 rounded-lg hover:bg-footer/50 transition-colors"
@@ -79,7 +81,7 @@ const MobileMenu = () => {
                   >
                     {/* <PdfIcon className="w-5 h-5" /> */}
                     <FileText className="mr-2 h-5 w-5" />
-                    <span>{t("documents")}</span>
+                    <span>{tCommon("buttons.cvDocuments")}</span>
                   </a>
                 </div>
               </div>

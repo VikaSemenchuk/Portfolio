@@ -1,4 +1,4 @@
-type Theme = 'light' | 'dark';
+import { Theme } from '@/types'
 
 export interface ThemeState {
 theme: Theme;

@@ -43,6 +43,7 @@ const ProjectsPage = () => {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   
   const projects = t("projects", { returnObjects: true }) as Project[];
+  console.log('projects :>> ', projects);
 
   const openProjectDetails = (project: Project) => {
     if (project.detailed) {

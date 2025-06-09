@@ -1,0 +1,33 @@
+{
+  "ui": {
+    "loading": "Lädt...",
+    "theme": "Thema",
+    "language": "Sprache",
+    "greeting": "Hallo!"
+  },
+  "buttons": {
+    "learnMore": "Mehr erfahren",
+    "getInTouch": "Kontakt aufnehmen",
+    "viewGitHub": "GitHub ansehen",
+    "viewLinkedIn": "LinkedIn ansehen",
+    "sourceCode": "Quellcode",
+    "viewDetails": "Details ansehen",
+    "allProjects": "Alle Projekte",
+    "close": "Schließen",
+    "cvDocuments": "Lebenslauf & Dokumente"
+  },
+  "projectCard": {
+    "techStack": "Technologien:",
+    "featured": "Vorgestelltes Projekt",
+    "role": "Rolle:"
+  },
+  "projectModal": {
+    "overview": "Projektübersicht",
+    "myRole": "Meine Rolle & Verantwortlichkeiten",
+    "technologies": "Technologien & Architektur",
+    "features": "Hauptfunktionen",
+    "achievements": "Wichtigste Erfolge",
+    "stats": "Projektstatistiken",
+    "codeExamples": "Codebeispiele"
+  }
+}

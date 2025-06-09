@@ -1,10 +1,10 @@
 import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
-import i18n from '../i18n';
-import getStoredValue from '../utils/getStoredValue';
+import i18n from '@/i18n';
+import getStoredValue from '@/utils/getStoredValue';
 
-import { Language } from '../types/language'
-import { LanguageState } from '../types/interfaces/languageState'
+import { Language } from '@/types'
+import { LanguageState } from '@/types/interfaces'
 
 
 export const useLanguageStore = create<LanguageState>()(

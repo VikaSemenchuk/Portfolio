@@ -1,0 +1,67 @@
+{
+  "home": {
+    "hero": {
+      "title": "Фулстек-розробниця з інженерним мисленням",
+      "subtitle": "Маючи аналітичну освіту, я перейшла з фінансів у розробку. Працюю з JavaScript, TypeScript, React і Node.js, створюючи корисні рішення.",
+      "photoAlt": "Фото Вікторії, веброзробниці"
+    }
+  },
+  "about": {
+    "name": "Вікторія Семенчук",
+    "title": "Про мене",
+    "intro": "Я фулстек-розробниця на початку кар’єри, захоплена інноваціями, командною роботою та безперервним навчанням. Мене мотивує гармонійне робоче середовище, а конструктивний зворотний зв’язок бачу як можливість для зростання та досягнення кращих результатів разом.",
+    "contacts": {
+      "email": "Viktoriia.semenchuk.dev@gmail.com",
+      "github": "https://github.com/VikaSemenchuk",
+      "linkedin": "https://www.linkedin.com/in/viktoriia-semenchuk-fullstack-developer"
+    },
+    "skills": {
+      "techTitle": "Tech skills",
+      "technical": [
+        "HTML5, CSS3 / SASS, адаптивна верстка",
+        "JavaScript, TypeScript, React",
+        "Rest API, Node.js, MongoDB, Mongoose",
+        "Vite, Parcel, Webpack",
+        "GIT"
+      ],
+      "softTitle": "Soft skills",
+      "soft": [
+        "Відповідальність",
+        "Командна робота",
+        "Комунікація",
+        "Розв'язання проблем"
+      ],
+      "languagesTitle": "Мови",
+      "languages": [
+        "Українська — рідна",
+        "Німецька — B2",
+        "Англійська — середній рівень"
+      ]
+    },
+    "educationTitle": "Освіта",
+    "education": [
+      {
+        "program": "Курс Fullstack Developer",
+        "institution": "GoIT, Київ",
+        "dates": "08/2022 – 08/2023"
+      },
+      {
+        "program": "Магістр з обліку",
+        "institution": "ТНЕУ, Чернівці",
+        "dates": "2007 – 2012"
+      }
+    ]
+  },
+  "projects": {
+    "title": "Мої проєкти",
+    "subtitle": "Ось деякі з проєктів, над якими я працювала, що демонструють мої навички у веброзробці та програмуванні.",
+    "collaborate": {
+      "title": "Хочеш співпрацювати?",
+      "description": "Я завжди відкрита до нових можливостей і цікавих проєктів. Давай створимо щось неймовірне разом!"
+    }
+  },
+  "career": {
+    "title": "Мій шлях в ІТ",
+    "content": "Ось мій шлях у сферу ІТ"
+  }
+}

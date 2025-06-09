@@ -1,9 +1,12 @@
-const Footer = () => {
-  return (
-    <footer >
-      <div className="container">
+import {useTranslation} from "react-i18next";
 
-        <p>&copy; 2025 Portfolio Viktoriia Semenchuk. All rights reserved.</p>
+const Footer = () => {
+  const { t: tNavigation } = useTranslation('navigation');
+  
+  return (
+    <footer>
+      <div className="container">
+        <p>{tNavigation("footer.copyright")}</p>
       </div>
     </footer>
   );

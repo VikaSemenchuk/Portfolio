@@ -2,13 +2,13 @@ import { useTranslation } from "react-i18next"
 import { NavLink } from "react-router-dom"
 
 const NavItem = () => {
-    const { t } = useTranslation()
+    const { t: tNavigation } = useTranslation('navigation')
 
     const navItems = [
-        { to: '/', label: t("header.nav.home") },
-        { to: '/about', label: t("header.nav.about") },
-        { to: '/projects', label: t("header.nav.projects") },
-        { to: '/path-to-it', label: t("header.nav.path-to-it") }
+        { to: '/', label: tNavigation("header.home") },
+        { to: '/about', label: tNavigation("header.about") },
+        { to: '/projects', label: tNavigation("header.projects") },
+        { to: '/path-to-it', label: tNavigation("header.career") }
     ]
 
     const linkClass = ({ isActive }: { isActive: boolean }) =>

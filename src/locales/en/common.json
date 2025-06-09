@@ -1,0 +1,33 @@
+{
+  "ui": {
+    "loading": "Loading...",
+    "theme": "Theme",
+    "language": "Language",
+    "greeting": "Hi!"
+  },
+  "buttons": {
+    "learnMore": "Learn more",
+    "getInTouch": "Get in touch", 
+    "viewGitHub": "View GitHub",
+    "viewLinkedIn": "View LinkedIn",
+    "sourceCode": "Source code",
+    "viewDetails": "View details",
+    "allProjects": "All projects",
+    "close": "Close",
+    "cvDocuments": "CV & documents"
+  },
+  "projectCard": {
+    "techStack": "Tech Stack:",
+    "featured": "Featured Project",
+    "role": "Role:"
+  },
+  "projectModal": {
+    "overview": "Project Overview",
+    "myRole": "My Role & Responsibilities",
+    "technologies": "Technologies & Architecture", 
+    "features": "Key Features",
+    "achievements": "Key Achievements",
+    "stats": "Project Stats",
+    "codeExamples": "Code Examples"
+  }
+}

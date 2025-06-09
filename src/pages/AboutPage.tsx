@@ -1,4 +1,3 @@
-import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
 import { 
   Code, 
@@ -11,28 +10,29 @@ import {
   MapPin,
   Calendar
 } from "lucide-react";
-import {ProjectSlider} from "@/components";
+// import { ProjectSlider } from "@/components";
 import AnimeAvatar from "@/assets/anime-avatar.png"; 
 
-const AboutPage = () => {
-  const { t } = useTranslation();
+import { useTranslation } from "react-i18next";
 
-  const techSkills = t('about-page.skills.technical', { returnObjects: true }) as string[];
-  const softSkills = t('about-page.skills.soft', { returnObjects: true }) as string[];
-  const languages = t('about-page.skills.languages', { returnObjects: true }) as string[];
-  const education = t('about-page.education', { returnObjects: true }) as {
+const AboutPage = () => {
+  // const { t: tCommon } = useTranslation('common');
+  const { t: tPages } = useTranslation('pages');
+  
+  const techSkills = tPages('about.skills.technical', { returnObjects: true }) as string[];
+  const softSkills = tPages('about.skills.soft', { returnObjects: true }) as string[];
+  const languages = tPages('about.skills.languages', { returnObjects: true }) as string[];
+  const education = tPages('about.education', { returnObjects: true }) as {
     program: string;
     institution: string;
     dates: string;
   }[];
-
-  const contacts = t('about-page.contacts', { returnObjects: true }) as {
+  const contacts = tPages('about.contacts', { returnObjects: true }) as {
     email: string;
     github: string;
     linkedin: string;
   };
 
-  // Анімації для секцій
   const sectionVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: { 
@@ -82,7 +82,7 @@ const AboutPage = () => {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.2 }}
                 >
-                  Viktoriia Semenchuk
+                  {tPages("about.name")}
                 </motion.h1>
                 
                 <motion.h2 
@@ -91,7 +91,7 @@ const AboutPage = () => {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.4 }}
                 >
-                  {t("hero.title")}
+                  {tPages("home.hero.title")}
                 </motion.h2>
                 
                 <motion.p 
@@ -100,11 +100,11 @@ const AboutPage = () => {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.6 }}
                 >
-                  {t("about-page.intro")}
+                  {tPages("about.intro")}
                 </motion.p>
               </div>
 
-              {/* Аватар */}
+             
               <div className="flex justify-center lg:justify-end">
                 <motion.div
                   initial={{ scale: 0.5, opacity: 0, rotateY: 20 }}
@@ -112,12 +112,12 @@ const AboutPage = () => {
                   transition={{ duration: 0.8, ease: "easeOut" }}
                   className="relative group"
                 >
-                  {/* Декоративні елементи */}
+                 
                   <div className="absolute -inset-4 bg-gradient-to-r from-accent/20 to-accent-hover/20 rounded-full blur-lg group-hover:blur-xl transition-all duration-300" />
                   
-                  {/* Основний аватар */}
+                
                   <div className="relative w-48 h-48 lg:w-56 lg:h-56 xl:w-64 xl:h-64">
-                    {/* Аніме фото */}
+                  
                     <div className="relative w-full h-full rounded-full overflow-hidden shadow-soft-lg group-hover:shadow-soft-lg transition-all duration-300">
                       <img 
                         src={AnimeAvatar}
@@ -125,20 +125,20 @@ const AboutPage = () => {
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                       />
                       
-                      {/* Градієнтний оверлей для стильності */}
+                   
                       <div className="absolute inset-0 bg-gradient-to-t from-accent/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                     </div>
                     
-                    {/* Стильна рамка */}
+                   
                     <div className="absolute inset-0 rounded-full border-4 border-white/20 group-hover:border-accent/30 transition-all duration-300" />
                     
-                    {/* Декоративні кружечки */}
+                   
                     <div className="absolute -top-2 -right-2 w-6 h-6 bg-accent rounded-full border-4 border-background shadow-lg animate-pulse" />
                     <div className="absolute -bottom-2 -left-2 w-4 h-4 bg-accent-hover rounded-full border-2 border-background shadow-lg animate-pulse" 
                          style={{ animationDelay: '1s' }} />
                   </div>
                   
-                  {/* Статус індикатор */}
+                
                   <div className="absolute bottom-4 right-4 w-6 h-6 bg-green-400 rounded-full border-4 border-background shadow-lg">
                     <div className="absolute inset-1 bg-green-500 rounded-full animate-pulse" />
                   </div>
@@ -149,12 +149,12 @@ const AboutPage = () => {
         </div>
       </motion.section>
 
-      {/* Контакти */}
+   
       <motion.section 
         className="section py-12 bg-surface"
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, amount: 0.3 }}
+        viewport={{ once: true, amount: 0.1 }}
         variants={sectionVariants}
       >
         <div className="container">
@@ -201,27 +201,25 @@ const AboutPage = () => {
         </div>
       </motion.section>
 
-      {/* Проекти */}
-      <ProjectSlider />
+      {/* <ProjectSlider /> */}
 
-      {/* Навички та освіта */}
       <motion.section 
         className="section py-16"
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, amount: 0.3 }}
+        viewport={{ once: true, amount: 0.1 }}
         variants={sectionVariants}
       >
         <div className="container">
           <div className="max-w-6xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
               
-              {/* Навички */}
+              
               <motion.div 
                 className="space-y-8"
                 variants={containerVariants}
               >
-                {/* Технічні навички */}
+                
                 <motion.div 
                   className="bg-surface p-8 rounded-2xl shadow-soft"
                   variants={itemVariants}
@@ -231,7 +229,7 @@ const AboutPage = () => {
                       <Code className="w-6 h-6 text-accent" />
                     </div>
                     <h3 className="text-2xl font-semibold">
-                      {t("about-page.skills.tech-skills-title")}
+                      {tPages("about.skills.techTitle")}
                     </h3>
                   </div>
                   <ul className="space-y-3">
@@ -250,7 +248,7 @@ const AboutPage = () => {
                   </ul>
                 </motion.div>
 
-                {/* Soft skills */}
+              
                 <motion.div 
                   className="bg-surface p-8 rounded-2xl shadow-soft"
                   variants={itemVariants}
@@ -260,7 +258,7 @@ const AboutPage = () => {
                       <Users className="w-6 h-6 text-accent" />
                     </div>
                     <h3 className="text-2xl font-semibold">
-                      {t("about-page.skills.soft-skills-title")}
+                      {tPages("about.skills.softTitle")}
                     </h3>
                   </div>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
@@ -280,12 +278,12 @@ const AboutPage = () => {
                 </motion.div>
               </motion.div>
 
-              {/* Мови та освіта */}
+            
               <motion.div 
                 className="space-y-8"
                 variants={containerVariants}
               >
-                {/* Мови */}
+              
                 <motion.div 
                   className="bg-surface p-8 rounded-2xl shadow-soft"
                   variants={itemVariants}
@@ -295,7 +293,7 @@ const AboutPage = () => {
                       <Globe className="w-6 h-6 text-accent" />
                     </div>
                     <h3 className="text-2xl font-semibold">
-                      {t("about-page.skills.languages-title")}
+                      {tPages("about.skills.languagesTitle")}
                     </h3>
                   </div>
                   <ul className="space-y-4">
@@ -314,7 +312,7 @@ const AboutPage = () => {
                   </ul>
                 </motion.div>
 
-                {/* Освіта */}
+              
                 <motion.div 
                   className="bg-surface p-8 rounded-2xl shadow-soft"
                   variants={itemVariants}
@@ -324,7 +322,7 @@ const AboutPage = () => {
                       <GraduationCap className="w-6 h-6 text-accent" />
                     </div>
                     <h3 className="text-2xl font-semibold">
-                      {t("about-page.education-title")}
+                      {tPages("about.educationTitle")}
                     </h3>
                   </div>
                   <div className="space-y-6">

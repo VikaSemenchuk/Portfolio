@@ -1,0 +1,13 @@
+{
+  "header": {
+     "menu": "Menü",
+    "home": "Startseite",
+    "about": "Über mich",
+    "projects": "Projekte",
+    "career": "Mein Weg in die IT",
+    "contact": "Kontakt"
+  },
+  "footer": {
+    "copyright": "© 2025 Portfolio Viktoriia Semenchuk. Alle Rechte vorbehalten."
+  }
+}

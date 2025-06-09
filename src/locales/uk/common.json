@@ -1,0 +1,33 @@
+{
+  "ui": {
+    "loading": "Завантаження...",
+    "theme": "Тема",
+    "language": "Мова",
+    "greeting": "Привіт!"
+  },
+  "buttons": {
+    "learnMore": "Дізнатися більше",
+    "getInTouch": "Зв'язатися",
+    "viewGitHub": "Переглянути GitHub",
+    "viewLinkedIn": "Переглянути LinkedIn",
+    "sourceCode": "Вихідний код",
+    "viewDetails": "Переглянути деталі",
+    "allProjects": "Усі проєкти",
+    "close": "Закрити",
+    "cvDocuments": "Резюме та документи"
+  },
+  "projectCard": {
+    "techStack": "Технології:",
+    "featured": "Обраний проєкт",
+    "role": "Роль:"
+  },
+  "projectModal": {
+    "overview": "Огляд проєкту",
+    "myRole": "Моя роль і обов'язки",
+    "technologies": "Технології та архітектура",
+    "features": "Ключові функції",
+    "achievements": "Основні досягнення",
+    "stats": "Статистика проєкту",
+    "codeExamples": "Приклади коду"
+  }
+}
