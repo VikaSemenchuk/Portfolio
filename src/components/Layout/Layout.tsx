@@ -16,8 +16,10 @@ const Layout = () => {
     <>
       <Header />
       <Suspense fallback={<h1>Loading...</h1>}>
-        <main className="flex-1 mx-auto px-4 flex items-center justify-center ">
-          <Outlet />
+        <main className="flex-1 mx-auto px-4 flex items-center justify-center min-h-[80vh] ">
+          <div>
+            <Outlet />
+          </div>
         </main>
       </Suspense>
       <Footer />

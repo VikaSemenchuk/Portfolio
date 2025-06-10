@@ -1,17 +1,18 @@
+import { Link } from "react-router-dom";
+
 import { useTranslation } from "react-i18next";
 
-import MyPhoto from "@/assets/hero-photo.png"
+import { FiFileText, FiArrowRight } from "react-icons/fi";
 
-import { Link } from "react-router-dom";
-import { ArrowRight, FileText } from "lucide-react";
-// import { ArrowRight, ArrowDownToLine } from "lucide-react";
+import MyPhoto from "@/assets/hero-photo.png"
+// import { LuArrowDownToLine } from "react-icons/lu";
 
 const Hero = () => {
   const { t: tPages } = useTranslation('pages')
   const { t: tCommon } = useTranslation('common')
 
   return (
-    <section className="section min-h-[80vh] flex items-center">
+    <section className="section flex items-center">
       <div className="container">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
           <div className="flex justify-center lg:justify-start order-1 lg:order-2">
@@ -41,15 +42,15 @@ const Hero = () => {
                 rel="noreferrer noopener"
                 className="btn-control justify-start w-[240px] group hover:scale-105 focus-visible:ring-accent focus-visible:ring-2"
               >
-                {/* <ArrowDownToLine className="mr-2 h-4 w-4" /> */}
-                <FileText className="mr-2 h-5 w-5" />
+                {/* <LuArrowDownToLine className="mr-2 h-4 w-4" /> */}
+                <FiFileText className="mr-2 h-5 w-5" />
                 <span>{tCommon("buttons.cvDocuments")}</span>
               </a>
 
               <Link to="/about">
                 <button className="btn justify-start w-[240px]">
                   {tCommon("buttons.learnMore")}
-                  <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                  <FiArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                 </button>
               </Link>
             </div>
