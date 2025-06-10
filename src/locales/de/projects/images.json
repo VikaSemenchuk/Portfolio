@@ -1,75 +1,74 @@
 {
   "id": "images",
-  "title": "Bildersuche",
-  "description": "Backend für einen Haustierdienst", 
-  "stack": "Node.js, MongoDB, Mongoose, Swagger, Express, JWT",
-  "link": "https://github.com/VikaSemenchuk/yourPets-backend",
+  "title": "Bildersuche Galerie",
+  "description": "Vanilla-JavaScript-Anwendung zur Bildsuche und Anzeige in einer Galerieansicht",
+  "stack": "Vanilla JavaScript, Pixabay API, SimpleLightbox, Notiflix, Parcel",
+  "link": "https://github.com/VikaSemenchuk/goit-js-hw-11",
   "image": "/projects/images.png",
   "featured": true,
-  "role": "Teamleiterin & Backend-Entwicklerin",
+  "role": "Frontend-Entwicklerin",
   "detailed": {
-    "overview": "YourPets ist eine voll ausgestattete Webplattform zur Suche und Veröffentlichung von Anzeigen zur Haustieradoption, entwickelt als Abschlussprojekt des GoIT-Kurses. Das Projekt bringt Tierbesitzer, die ein neues Zuhause für ihre Tiere suchen, mit Menschen zusammen, die ein Haustier adoptieren möchten. Entwickelt mit modernen Technologien und auf Basis realer Geschäftsanforderungen.",
-    "myRole": "Ich leitete ein Team von mehr als 4 Entwickler:innen im GoIT-Abschlussprojekt, koordinierte die Arbeit zwischen Frontend und Backend, war verantwortlich für die Projektarchitektur, Code-Reviews, Aufgabenverteilung und Qualitätskontrolle. Ich entwickelte persönlich das Backend: REST API, MongoDB, Authentifizierung, Cloudinary-Integration. Das Projekt wurde gemäß den realen technischen Anforderungen und Branchenstandards umgesetzt.",
+    "overview": "Image Search Gallery ist eine Vanilla-JavaScript-Anwendung, die es Nutzer:innen ermöglicht, hochwertige Bilder über die Pixabay API zu suchen. Das Projekt umfasst eine Endlos-Scroll-Funktion mit Paginierung, eine Lightbox-Galerie und ein responsives Grid-Layout. Es wurde ohne Frameworks entwickelt, um reine JavaScript-Fähigkeiten und moderne Webentwicklungstechniken zu demonstrieren.",
+    "myRole": "Ich habe die komplette Frontend-Anwendung mit Vanilla JavaScript und modernen ES6+ Features entwickelt. Die API-Integration mit Pixabay, responsive UI-Komponenten, Lightbox-Funktionalität sowie Ladezustände und Fehlerbehandlung wurden von mir umgesetzt. Der Fokus lag auf sauberer, modularer Codearchitektur ohne Frameworks.",
     "technologies": {
-      "backend": [
-        "Node.js + Express.js — Serverseite und API",
-        "MongoDB + Mongoose — Datenbank und ODM",
-        "JWT — Authentifizierung und Autorisierung",
-        "bcrypt — Passwort-Hashing",
-        "Cloudinary — Bildspeicherung und -verarbeitung",
-        "Multer — Datei-Uploads"
+      "frontend": [
+        "Vanilla JavaScript ES6+ — moderne JavaScript-Funktionen und Syntax",
+        "HTML5 & CSS3 — semantisches Markup und modernes Styling",
+        "SCSS — CSS-Präprozessor für bessere Stilstrukturierung",
+        "Parcel — moderner Build-Tool zur Optimierung",
+        "Modern Normalize — einheitliches Styling in allen Browsern"
+      ],
+      "libraries": [
+        "Axios — HTTP-Client für API-Anfragen",
+        "SimpleLightbox — elegante Galerie mit Lightbox-Funktion",
+        "Notiflix — benutzerfreundliche Benachrichtigungen",
+        "Pixabay API — qualitativ hochwertige Bildsuche"
       ],
       "architecture": [
-        "RESTful API mit durchdachter Endpunktstruktur",
-        "Middleware-Muster für Authentifizierung und Validierung",
-        "Zentrale Fehlerbehandlung",
-        "Paginierung zur Optimierung großer Listen",
-        "Suche & Filterung mit flexiblen Parametern"
-      ],
-      "dataManagement": [
-        "MongoDB-Aggregations-Pipeline für komplexe Abfragen",
-        "Schema-Design mit Validierung und Indizes",
-        "Datei-Upload mit automatischer Bildoptimierung",
-        "Datenbeziehungen zwischen Benutzer:innen, Tieren und Anzeigen"
+        "Modulare JavaScript-Architektur mit ES6-Klassen",
+        "Trennung der Verantwortlichkeiten durch Service-Klassen",
+        "Eventgesteuerte Programmierung mit sauberem Event-Handling",
+        "Responsives Grid-Layout mit CSS Grid und Flexbox",
+        "Progressive Enhancement und Ausfallsicherheit"
       ]
     },
     "features": [
       {
-        "title": "Benutzersystem",
-        "description": "Registrierung und Anmeldung mit JWT-Tokens, Benutzerprofil mit Bearbeitungsfunktionen, Avatar-Upload und -Änderung, sichere Passwortspeicherung mit bcrypt"
+        "title": "Bildsuche & Entdeckung",
+        "description": "Suche nach hochwertigen Bildern mittels Schlüsselwörtern, Anzeige in einem responsiven Grid, automatische Bildoptimierung und Lazy Loading, flüssiges endloses Scrollen"
       },
       {
-        "title": "Anzeigenverwaltung",
-        "description": "CRUD-Operationen für Tieranzeigen, Kategorien: Verkauf, zu verschenken, verloren-gefunden, Filterung nach Geschlecht, Alter, Standort, Suche nach Titel und Tierart"
+        "title": "Galerie-Erlebnis",
+        "description": "Lightbox-Galerie mit Navigationssteuerung, Vollbildanzeige mit Zoomfunktion, Tastaturnavigation, Anzeige von Bild-Metadaten (Likes, Aufrufe, Downloads, Kommentare)"
       },
       {
-        "title": "Eigene Haustiere",
-        "description": "Hinzufügen eigener Haustiere, Fotogalerie, Informationen zu Alter, Art, Kommentare"
+        "title": "Benutzeroberfläche & UX",
+        "description": "Sauberes, responsives Design für alle Geräte, Ladeanimationen und Benutzer-Feedback, Fehlermeldungen mit hilfreichen Hinweisen, weiche Übergänge und Hover-Effekte"
       },
       {
-        "title": "Zusätzliche Module",
-        "description": "Partnerorganisationen-Katalog, Tiernachrichten mit Suche, Paginierung für alle Listen"
+        "title": "Performance & Optimierung",
+        "description": "Effiziente API-Aufrufe mit Paginierung, Lazy Loading von Bildern für bessere Performance, Debounced Search zur Reduzierung von API-Aufrufen, optimierte Bundle-Größe mit Parcel"
       }
     ],
     "achievements": [
-      "Leitung eines Teams von 4+ Entwickler:innen und Sicherstellung der Synchronisation von Frontend/Backend",
-      "Organisation des Code-Review-Prozesses und Etablierung von Qualitätsstandards",
-      "Gestaltung der Architektur des gesamten Projekts und Aufgabenverteilung",
-      "Implementierung eines komplexen Backends mit 15+ Endpunkten und Integrationen",
-      "Einhaltung von Fristen und erfolgreiche Produktbereitstellung",
-      "Erstellung einer umfassenden technischen Dokumentation und API-Spezifikation"
+      "Vollständig funktionierende Bildsuchanwendung mit reinem JavaScript erstellt",
+      "Effiziente Paginierung mit Endlos-Scroll-Funktionalität implementiert",
+      "Responsives Design, das auf allen Geräten reibungslos funktioniert",
+      "Externe API mit Fehlerbehandlung und Limitierung integriert",
+      "Geschmeidiges Benutzererlebnis mit Ladezuständen und Animationen",
+      "Saubere, modulare Code-Struktur ohne Frameworks eingehalten"
     ],
     "stats": {
-      "teamSize": "4+",
-      "endpoints": "15+",
-      "modules": "5",
-      "filterParams": "8+",
-      "coverage": "100%"
+      "jsClasses": "3",
+      "apiEndpoints": "1",
+      "responsiveBreakpoints": "3",
+      "imagesPerPage": "40",
+      "bundleSize": "< 100KB"
     },
     "codeExamples": {
-      "aggregation": "const pipeline = [\n  { $match: { category: \"sell\", sex: \"female\" } },\n  { $skip: skip },\n  { $limit: limit },\n  { $sort: { createdAt: -1 } }\n];\n\nconst noticesList = await Notice.aggregate(pipeline);",
-      "cloudinary": "const storage = new CloudinaryStorage({\n  cloudinary: cloudinary,\n  params: {\n    folder: \"petsshop\",\n    transformation: [{ width: 500, height: 500 }]\n  }\n});",
-      "middleware": "const authenticate = async (req, res, next) => {\n  const { authorization = '' } = req.headers;\n  const [bearer, token] = authorization.split(' ');\n  \n  if (bearer !== 'Bearer' || !token) {\n    return res.status(401).json({ message: \"Not authorized\" });\n  }\n  \n  try {\n    const { id } = jwt.verify(token, process.env.JWT_SECRET);\n    const user = await User.findById(id);\n    req.user = user;\n    next();\n  } catch (err) {\n    res.status(401).json({ message: \"Invalid token\" });\n  }\n};"
+      "apiService": "...",
+      "loadMoreButton": "...",
+      "imageMarkup": "..."
     }
   }
 }

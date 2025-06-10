@@ -1,0 +1,75 @@
+{
+  "id": "movies",
+  "title": "Movies Search App",
+  "description": "React application for searching and viewing movie information",
+  "stack": "React, React Router, Styled Components, Axios, PropTypes",
+  "link": "https://github.com/VikaSemenchuk/goit-react-hw-05-movies",
+  "image": "/projects/images.png",
+  "featured": true,
+  "role": "Frontend Developer",
+  "detailed": {
+    "overview": "Movies Search App is a single-page React application for searching movies using The Movie Database (TMDb) API. The project demonstrates modern React development practices including routing, API integration, and responsive design. Users can browse trending movies, search for specific films, and view detailed information including cast and reviews.",
+    "myRole": "Developed the complete frontend application using React and modern JavaScript. Implemented responsive design, API integration with TMDb, routing with React Router, and state management. Created reusable components and ensured proper error handling and loading states throughout the application.",
+    "technologies": {
+      "frontend": [
+        "React 18 — component-based UI development",
+        "React Router DOM — client-side routing and navigation",
+        "Styled Components — CSS-in-JS styling solution",
+        "Axios — HTTP client for API requests",
+        "PropTypes — runtime type checking for React props"
+      ],
+      "architecture": [
+        "Single Page Application (SPA) architecture",
+        "Component-based design with reusable UI elements",
+        "Custom hooks for data fetching and state management",
+        "Lazy loading and code splitting for performance",
+        "Responsive design with mobile-first approach"
+      ],
+      "apiIntegration": [
+        "TMDb API integration for movie data",
+        "Custom API service with axios interceptors",
+        "Error handling and loading states",
+        "Image optimization and placeholder handling",
+        "Search functionality with debouncing"
+      ]
+    },
+    "features": [
+      {
+        "title": "Movie Discovery",
+        "description": "Browse trending movies on the homepage, search for specific films using the search functionality, view movie posters with fallback images for missing content"
+      },
+      {
+        "title": "Detailed Movie Information",
+        "description": "View comprehensive movie details including title, release year, user score, overview, and genres. Access cast information with actor photos and character names, read user reviews and ratings"
+      },
+      {
+        "title": "Navigation & UX",
+        "description": "Intuitive navigation with React Router, go-back functionality to previous pages, responsive design for all device sizes, loading states and error handling"
+      },
+      {
+        "title": "Performance Optimization",
+        "description": "Lazy loading of components for better performance, image optimization with automatic resizing, efficient state management and re-rendering"
+      }
+    ],
+    "achievements": [
+      "Built a fully functional movie search application with modern React practices",
+      "Implemented robust routing system with nested routes and dynamic parameters",
+      "Created responsive design that works seamlessly across all device sizes",
+      "Integrated external API with proper error handling and loading states",
+      "Optimized application performance using lazy loading and code splitting",
+      "Maintained clean, readable code with proper component structure and styling"
+    ],
+    "stats": {
+      "components": "15+",
+      "routes": "5",
+      "apiEndpoints": "5",
+      "responsiveBreakpoints": "3",
+      "codeQuality": "ESLint compliant"
+    },
+    "codeExamples": {
+      "apiService": "const moviesAPI = axios.create({\n  baseURL: 'https://api.themoviedb.org/3/',\n  params: {\n    api_key: 'f0f166877cbfe2faaaf5104584f5709ced',\n  },\n});\n\nexport const APIgetTrandingMovies = async () => {\n  const response = await moviesAPI.get(`trending/movie/day`);\n  return response.data.results;\n};",
+      "routing": "const App = () => {\n  return (\n    <Routes>\n      <Route path=\"/\" element={<Layout />}>\n        <Route index element={<LazyHomePage />} />\n        <Route path=\"movies\" element={<LazyMoviesPage />} />\n        <Route path=\"movies/:movieId\" element={<LazyMovieDetailsPage />}>\n          <Route path=\"cast\" element={<LazyMovieCast />} />\n          <Route path=\"review\" element={<LazyMovieReview />} />\n        </Route>\n      </Route>\n    </Routes>\n  );\n};",
+      "styledComponents": "export const StyledMovieLink = styled(Link)`\n  min-height: 600px;\n  text-decoration: none;\n  color: black;\n  \n  &:hover {\n    transform: scale(1.03);\n    cursor: zoom-in;\n  }\n`;"
+    }
+  }
+}

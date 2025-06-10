@@ -1,0 +1,75 @@
+{
+  "id": "movies",
+  "title": "Film-Suchanwendung",
+  "description": "React-Anwendung zur Suche und Anzeige von Filminformationen",
+  "stack": "React, React Router, Styled Components, Axios, PropTypes",
+  "link": "https://github.com/VikaSemenchuk/goit-react-hw-05-movies",
+  "image": "/projects/images.png",
+  "featured": true,
+  "role": "Frontend-Entwicklerin",
+  "detailed": {
+    "overview": "Movies Search App ist eine Single-Page-React-Anwendung, die es ermöglicht, Filme über die The Movie Database (TMDb) API zu suchen. Das Projekt zeigt moderne React-Entwicklung, einschließlich Routing, API-Integration und responsivem Design. Nutzer:innen können aktuelle Trends entdecken, gezielt nach Filmen suchen und detaillierte Informationen wie Besetzung und Bewertungen abrufen.",
+    "myRole": "Ich habe die gesamte Frontend-Anwendung mit React und modernem JavaScript entwickelt. Umgesetzt wurden responsives Design, Integration mit der TMDb-API, Routing mit React Router sowie State-Management. Ich erstellte wiederverwendbare Komponenten und sorgte für saubere Fehlerbehandlung und Ladezustände.",
+    "technologies": {
+      "frontend": [
+        "React 18 — komponentenbasierte UI-Entwicklung",
+        "React Router DOM — clientseitiges Routing",
+        "Styled Components — CSS-in-JS Styling",
+        "Axios — HTTP-Client für API-Abfragen",
+        "PropTypes — Laufzeit-Typüberprüfung von Props"
+      ],
+      "architecture": [
+        "Single Page Application (SPA)",
+        "Komponentenbasierter Aufbau mit wiederverwendbaren Elementen",
+        "Eigene Hooks zur Datenabfrage und Zustandsverwaltung",
+        "Code-Splitting und Lazy Loading zur Leistungsoptimierung",
+        "Responsives Design im Mobile-First-Ansatz"
+      ],
+      "apiIntegration": [
+        "TMDb API-Integration für Filmdaten",
+        "Benutzerdefinierter API-Service mit Axios-Interceptors",
+        "Fehlerbehandlung und Ladeindikatoren",
+        "Bildoptimierung und Platzhalterverwaltung",
+        "Suche mit Debouncing zur API-Entlastung"
+      ]
+    },
+    "features": [
+      {
+        "title": "Film-Entdeckung",
+        "description": "Stöbere in angesagten Filmen, suche gezielt nach Titeln, zeige Filmplakate mit Platzhaltern bei fehlendem Bildmaterial"
+      },
+      {
+        "title": "Detaillierte Filminformationen",
+        "description": "Titel, Erscheinungsjahr, Bewertung, Beschreibung, Genre, Besetzung mit Fotos und Rollen, Nutzerbewertungen"
+      },
+      {
+        "title": "Navigation & Benutzererlebnis",
+        "description": "Intuitive Navigation mit React Router, Zurück-Schaltfläche, responsive Darstellung, Ladeindikatoren und Fehlermeldungen"
+      },
+      {
+        "title": "Performance-Optimierung",
+        "description": "Lazy Loading für Komponenten, automatische Bildanpassung, effizientes State-Handling und Rendering"
+      }
+    ],
+    "achievements": [
+      "Moderne React-Praktiken in einer funktionsfähigen Film-Such-App umgesetzt",
+      "Verschachteltes Routing und dynamische Pfade implementiert",
+      "Responsives Design für alle Geräte realisiert",
+      "Externe API integriert mit robustem Fehlerhandling",
+      "Leistungsoptimierung durch Lazy Loading und Code-Splitting",
+      "Klar strukturierter und gut lesbarer Code mit sauberer Komponentenstruktur"
+    ],
+    "stats": {
+      "components": "15+",
+      "routes": "5",
+      "apiEndpoints": "5",
+      "responsiveBreakpoints": "3",
+      "codeQuality": "ESLint-konform"
+    },
+    "codeExamples": {
+      "apiService": "...",
+      "routing": "...",
+      "styledComponents": "..."
+    }
+  }
+}

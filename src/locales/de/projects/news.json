@@ -1,75 +1,73 @@
 {
   "id": "news",
-  "title": "Nachrichten",
-  "description": "Backend für einen Haustierdienst", 
-  "stack": "Node.js, MongoDB, Mongoose, Swagger, Express, JWT",
-  "link": "https://github.com/VikaSemenchuk/yourPets-backend",
+  "title": "Nachrichtenportal",
+  "description": "Umfassende Nachrichtenplattform mit Kategoriefiltern und Personalisierungsfunktionen",
+  "stack": "Vanilla JavaScript, SCSS, Parcel, New York Times API, OpenWeather API",
+  "link": "https://github.com/Yermolinn/News",
   "image": "/projects/news.png",
   "featured": true,
-  "role": "Teamleiterin & Backend-Entwicklerin",
+  "role": "Frontend-Entwicklerin & Teammitglied",
   "detailed": {
-    "overview": "YourPets ist eine voll ausgestattete Webplattform zur Suche und Veröffentlichung von Anzeigen zur Haustieradoption, entwickelt als Abschlussprojekt des GoIT-Kurses. Das Projekt bringt Tierbesitzer, die ein neues Zuhause für ihre Tiere suchen, mit Menschen zusammen, die ein Haustier adoptieren möchten. Entwickelt mit modernen Technologien und auf Basis realer Geschäftsanforderungen.",
-    "myRole": "Ich leitete ein Team von mehr als 4 Entwickler:innen im GoIT-Abschlussprojekt, koordinierte die Arbeit zwischen Frontend und Backend, war verantwortlich für die Projektarchitektur, Code-Reviews, Aufgabenverteilung und Qualitätskontrolle. Ich entwickelte persönlich das Backend: REST API, MongoDB, Authentifizierung, Cloudinary-Integration. Das Projekt wurde gemäß den realen technischen Anforderungen und Branchenstandards umgesetzt.",
+    "overview": "News Portal ist eine umfangreiche Nachrichtenplattform, die Artikel über die New York Times API abruft. Sie bietet Kategoriefilterung, Suchfunktionen, Wetterintegration und persönliche Leselisten. Als Teamprojekt mit Vanilla JavaScript zeigt es fortgeschrittene Frontend-Fähigkeiten wie API-Integration, lokale Speicherung und responsives Design.",
+    "myRole": "Ich war als Frontend-Entwicklerin in einem Team aktiv. Entwickelte Kernfunktionen wie Nachrichtenanzeige, Verwaltung von Favoriten und Gelesenem über LocalStorage, responsive UI-Komponenten und API-Integration. Teilnahme an Code-Reviews, Architekturentscheidungen und Sicherstellung der Codequalität.",
     "technologies": {
-      "backend": [
-        "Node.js + Express.js — Serverseite und API",
-        "MongoDB + Mongoose — Datenbank und ODM",
-        "JWT — Authentifizierung und Autorisierung",
-        "bcrypt — Passwort-Hashing",
-        "Cloudinary — Bildspeicherung und -verarbeitung",
-        "Multer — Datei-Uploads"
+      "frontend": [
+        "Vanilla JavaScript ES6+ — moderne Klassen und Module",
+        "SCSS — fortgeschrittenes CSS mit Mixins und Variablen",
+        "HTML5 — semantisches Markup mit Fokus auf Barrierefreiheit",
+        "Parcel — Build-Tool für Entwicklung und Optimierung",
+        "Flatpickr — eleganter Datumswähler zur Filterung"
+      ],
+      "apis": [
+        "New York Times API — Artikeldaten und Suche",
+        "OpenWeather API — aktuelles Wetter und Wochenvorhersage",
+        "Mehrere NYT-Endpunkte — Artikel, Kategorien, Suche"
       ],
       "architecture": [
-        "RESTful API mit durchdachter Endpunktstruktur",
-        "Middleware-Muster für Authentifizierung und Validierung",
-        "Zentrale Fehlerbehandlung",
-        "Paginierung zur Optimierung großer Listen",
-        "Suche & Filterung mit flexiblen Parametern"
-      ],
-      "dataManagement": [
-        "MongoDB-Aggregations-Pipeline für komplexe Abfragen",
-        "Schema-Design mit Validierung und Indizes",
-        "Datei-Upload mit automatischer Bildoptimierung",
-        "Datenbeziehungen zwischen Benutzer:innen, Tieren und Anzeigen"
+        "Modulare JavaScript-Architektur mit ES6-Modulen",
+        "Komponentenbasierte UI ohne Frameworks",
+        "LocalStorage-Management für Benutzereinstellungen",
+        "Responsives Design im Mobile-First-Ansatz",
+        "PWA-Funktionen und Offline-Unterstützung"
       ]
     },
     "features": [
       {
-        "title": "Benutzersystem",
-        "description": "Registrierung und Anmeldung mit JWT-Tokens, Benutzerprofil mit Bearbeitungsfunktionen, Avatar-Upload und -Änderung, sichere Passwortspeicherung mit bcrypt"
+        "title": "Nachrichtenübersicht & Suche",
+        "description": "Blättere durch Trendartikel, suche nach Inhalten, filtere nach Kategorien und Datum mit Kalenderunterstützung"
       },
       {
-        "title": "Anzeigenverwaltung",
-        "description": "CRUD-Operationen für Tieranzeigen, Kategorien: Verkauf, zu verschenken, verloren-gefunden, Filterung nach Geschlecht, Alter, Standort, Suche nach Titel und Tierart"
+        "title": "Personalisierung",
+        "description": "Artikel zu Favoriten hinzufügen, Leseverlauf verfolgen, gelesene Artikel nach Datum organisieren, Speicherung mit LocalStorage"
       },
       {
-        "title": "Eigene Haustiere",
-        "description": "Hinzufügen eigener Haustiere, Fotogalerie, Informationen zu Alter, Art, Kommentare"
+        "title": "Optimiertes Benutzererlebnis",
+        "description": "Wetter-Widget mit aktueller Lage und Vorschau, Licht/Dunkel-Modus mit gespeicherten Präferenzen, Pagination und responsives Design"
       },
       {
-        "title": "Zusätzliche Module",
-        "description": "Partnerorganisationen-Katalog, Tiernachrichten mit Suche, Paginierung für alle Listen"
+        "title": "Erweiterte Funktionen",
+        "description": "Integration mehrerer APIs mit Fehlerbehandlung, Lazy Loading und Infinite Scroll, erweiterte Filter und Sortierung, Animationen und Übergänge"
       }
     ],
     "achievements": [
-      "Leitung eines Teams von 4+ Entwickler:innen und Sicherstellung der Synchronisation von Frontend/Backend",
-      "Organisation des Code-Review-Prozesses und Etablierung von Qualitätsstandards",
-      "Gestaltung der Architektur des gesamten Projekts und Aufgabenverteilung",
-      "Implementierung eines komplexen Backends mit 15+ Endpunkten und Integrationen",
-      "Einhaltung von Fristen und erfolgreiche Produktbereitstellung",
-      "Erstellung einer umfassenden technischen Dokumentation und API-Spezifikation"
+      "Mitwirkung an einem komplexen Teamprojekt mit mehreren Entwickler:innen",
+      "Robustes LocalStorage-System zur Datenspeicherung implementiert",
+      "Responsives Design für alle Gerätegrößen erstellt",
+      "Mehrere APIs integriert mit zuverlässigem Fallback",
+      "Effiziente Pagination- und Filterfunktionen entwickelt",
+      "Hohe Codequalität und konsistenter Teamstandard eingehalten"
     ],
     "stats": {
       "teamSize": "4+",
-      "endpoints": "15+",
-      "modules": "5",
-      "filterParams": "8+",
-      "coverage": "100%"
+      "apiEndpoints": "8+",
+      "components": "20+",
+      "pages": "3",
+      "features": "15+"
     },
     "codeExamples": {
-      "aggregation": "const pipeline = [\n  { $match: { category: \"sell\", sex: \"female\" } },\n  { $skip: skip },\n  { $limit: limit },\n  { $sort: { createdAt: -1 } }\n];\n\nconst noticesList = await Notice.aggregate(pipeline);",
-      "cloudinary": "const storage = new CloudinaryStorage({\n  cloudinary: cloudinary,\n  params: {\n    folder: \"petsshop\",\n    transformation: [{ width: 500, height: 500 }]\n  }\n});",
-      "middleware": "const authenticate = async (req, res, next) => {\n  const { authorization = '' } = req.headers;\n  const [bearer, token] = authorization.split(' ');\n  \n  if (bearer !== 'Bearer' || !token) {\n    return res.status(401).json({ message: \"Not authorized\" });\n  }\n  \n  try {\n    const { id } = jwt.verify(token, process.env.JWT_SECRET);\n    const user = await User.findById(id);\n    req.user = user;\n    next();\n  } catch (err) {\n    res.status(401).json({ message: \"Invalid token\" });\n  }\n};"
+      "apiService": "...",
+      "localStorage": "...",
+      "weatherWidget": "..."
     }
   }
 }

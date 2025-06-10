@@ -55,6 +55,11 @@
   "projects": {
     "title": "Meine Projekte",
     "subtitle": "Hier sind einige Projekte, an denen ich gearbeitet habe und die meine Fähigkeiten in der Webentwicklung zeigen.",
+     "projectNamespaces": [
+      "petsProject",
+      "newsProject", 
+      "imagesProject"
+    ],
     "collaborate": {
       "title": "Möchtest du zusammenarbeiten?",
       "description": "Ich bin immer offen für neue Möglichkeiten und spannende Projekte. Lass uns gemeinsam etwas Großartiges schaffen!"

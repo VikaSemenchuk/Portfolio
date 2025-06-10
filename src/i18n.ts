@@ -7,6 +7,7 @@ import enPages from '@/locales/en/pages.json';
 import enPetsProject from '@/locales/en/projects/pets.json';
 import enNewsProject from '@/locales/en/projects/news.json';
 import enImagesProject from '@/locales/en/projects/images.json';
+import enMoviesProject from '@/locales/en/projects/movies.json';
 
 
 import ukCommon from '@/locales/uk/common.json';
@@ -15,6 +16,7 @@ import ukPages from '@/locales/uk/pages.json';
 import ukPetsProject from '@/locales/uk/projects/pets.json';
 import ukNewsProject from '@/locales/uk/projects/news.json';
 import ukImagesProject from '@/locales/uk/projects/images.json';
+import ukMoviesProject from '@/locales/uk/projects/movies.json';
 
 
 import deCommon from '@/locales/de/common.json';
@@ -23,6 +25,7 @@ import dePages from '@/locales/de/pages.json';
 import dePetsProject from '@/locales/de/projects/pets.json';
 import deNewsProject from '@/locales/de/projects/news.json';
 import deImagesProject from '@/locales/de/projects/images.json';
+import deMoviesProject from '@/locales/de/projects/movies.json';
 import { getStoredValue } from '@/utils';
 
 const currentLanguage = getStoredValue('language', ['en', 'uk', 'de'], 'en');
@@ -37,7 +40,8 @@ i18n
         pages: enPages,
         petsProject: enPetsProject,
         newsProject: enNewsProject,
-        imagesProject: enImagesProject
+        imagesProject: enImagesProject,
+        moviesProject: enMoviesProject
       },
       uk: {
         common: ukCommon,
@@ -45,7 +49,8 @@ i18n
         pages: ukPages,
         petsProject: ukPetsProject,
         newsProject: ukNewsProject,
-        imagesProject: ukImagesProject
+        imagesProject: ukImagesProject,
+        moviesProject: ukMoviesProject
       },
       de: {
         common: deCommon,
@@ -53,7 +58,8 @@ i18n
         pages: dePages,
         petsProject: dePetsProject,
         newsProject: deNewsProject,
-        imagesProject: deImagesProject
+        imagesProject: deImagesProject,
+        moviesProject: deMoviesProject
       }
     },
     fallbackLng: 'en',

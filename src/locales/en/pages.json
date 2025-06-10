@@ -55,6 +55,11 @@
   "projects": {
     "title": "My Projects",
     "subtitle": "Here are some of the projects I've worked on, showcasing my skills in web development and programming.",
+     "projectNamespaces": [
+      "petsProject",
+      "newsProject", 
+      "imagesProject"
+    ],
     "collaborate": {
       "title": "Want to collaborate?",
       "description": "I'm always open to discussing new opportunities and interesting projects. Let's build something amazing together!"

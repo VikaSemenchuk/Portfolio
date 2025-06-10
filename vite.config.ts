@@ -10,5 +10,17 @@ export default defineConfig({
     alias: {
     '@': path.resolve(__dirname, './src')         
   }
+  },
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          'react-vendor': ['react', 'react-dom'],
+          'router': ['react-router-dom'],
+          'motion': ['framer-motion'],
+          'i18n': ['i18next', 'react-i18next']
+        }
+      }
+    }
   }
 })

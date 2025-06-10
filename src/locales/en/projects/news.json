@@ -1,75 +1,73 @@
 {
   "id": "news",
-  "title": "News",
-  "description": "Backend for pet service", 
-  "stack": "Node.js, MongoDB, Mongoose, Swagger, Express, JWT",
-  "link": "https://github.com/VikaSemenchuk/yourPets-backend",
+  "title": "News Portal",
+  "description": "Comprehensive news aggregation platform with category filtering and personalization features",
+  "stack": "Vanilla JavaScript, SCSS, Parcel, New York Times API, OpenWeather API",
+  "link": "https://github.com/Yermolinn/News",
   "image": "/projects/news.png",
   "featured": true,
-  "role": "Developer",
+  "role": "Frontend Developer & Team Contributor",
   "detailed": {
-    "overview": "YourPets is a full-featured web platform for searching and posting pet adoption ads, developed as a graduation project for the GoIT course. The project connects pet owners looking for new homes for their beloved animals with people who want to adopt a pet. Built using modern technologies and real business requirements.",
-    "myRole": "Led a team of 4+ developers in the GoIT final project, coordinated work between frontend and backend, responsible for project architecture, code review, task distribution and quality control. Personally developed the backend: REST API, MongoDB, authentication, Cloudinary integration. The project was executed according to real technical requirements following industry standards.",
+    "overview": "News Portal is a comprehensive news aggregation platform that fetches articles from The New York Times API. The project features category-based filtering, search functionality, weather integration, and personal reading lists. Built as a team project using vanilla JavaScript, it demonstrates advanced frontend development skills including API integration, local storage management, and responsive design.",
+    "myRole": "Contributed as a frontend developer in a collaborative team environment. Developed key features including news rendering system, local storage management for favorites and read articles, responsive UI components, and API service integration. Participated in code reviews, collaborated on project architecture decisions, and ensured consistent code quality across the application.",
     "technologies": {
-      "backend": [
-        "Node.js + Express.js — server-side and API",
-        "MongoDB + Mongoose — database and ODM", 
-        "JWT — authentication and authorization",
-        "bcrypt — password hashing",
-        "Cloudinary — image storage and processing",
-        "Multer — file uploads"
+      "frontend": [
+        "Vanilla JavaScript ES6+ — modern JavaScript with classes and modules",
+        "SCSS — advanced CSS preprocessing with mixins and variables",
+        "HTML5 — semantic markup with accessibility considerations",
+        "Parcel — build tool for development and production optimization",
+        "Flatpickr — elegant date picker for news filtering"
+      ],
+      "apis": [
+        "New York Times API — comprehensive news data and search",
+        "OpenWeather API — current weather and weekly forecasts",
+        "Multiple NYT endpoints — articles, categories, and search functionality"
       ],
       "architecture": [
-        "RESTful API with thoughtful endpoint structure",
-        "Middleware pattern for authentication and validation",
-        "Error handling with centralized error processing", 
-        "Pagination for optimizing large lists",
-        "Search & Filtering with flexible parameters"
-      ],
-      "dataManagement": [
-        "MongoDB Aggregation Pipeline for complex queries",
-        "Schema Design with validation and indexes",
-        "File Upload with automatic image optimization",
-        "Data Relationships between users, pets, and notices"
+        "Modular JavaScript architecture with ES6 modules",
+        "Component-based UI development without frameworks",
+        "Local storage management for user preferences",
+        "Responsive design with mobile-first approach",
+        "Progressive web app features and offline capabilities"
       ]
     },
     "features": [
       {
-        "title": "User System",
-        "description": "Registration and authorization with JWT tokens, user profile with editing capabilities, avatar upload and change, secure password storage with bcrypt"
+        "title": "News Discovery & Search",
+        "description": "Browse trending and popular news articles, search functionality across all articles, category-based filtering with dynamic loading, date-based filtering with calendar integration"
       },
       {
-        "title": "Notice Management", 
-        "description": "CRUD operations for pet notices, categories: sell, free, lost-found, filtering by gender, age, location, search by title and pet type"
+        "title": "Personalization Features",
+        "description": "Add articles to personal favorites collection, track reading history with 'already read' indicators, organize read articles by date, persistent storage using localStorage"
       },
       {
-        "title": "Personal Pets",
-        "description": "Adding personal pets, photo gallery, information about age, type, comments"
+        "title": "Enhanced User Experience",
+        "description": "Weather widget with current conditions and weekly forecast, dark/light theme toggle with user preference storage, responsive design optimized for all devices, pagination for large article sets"
       },
       {
-        "title": "Additional Modules",
-        "description": "Partner organizations catalog, pet news with search, pagination for all lists"
+        "title": "Advanced Functionality",
+        "description": "Multiple API integrations with error handling, lazy loading and infinite scroll, advanced filtering and sorting options, smooth animations and transitions"
       }
     ],
     "achievements": [
-      "Led a team of 4+ developers, ensuring frontend/backend synchronization",
-      "Organized code review process and established code quality standards", 
-      "Designed the architecture of the entire project and distributed tasks among the team",
-      "Implemented complex backend system with 15+ endpoints and integrations",
-      "Ensured deadline adherence and successful product deployment",
-      "Created detailed technical documentation and API specification"
+      "Contributed to a complex team project with multiple developers",
+      "Implemented robust local storage system for user data persistence",
+      "Created responsive design that works seamlessly across all device sizes",
+      "Integrated multiple APIs with proper error handling and fallbacks",
+      "Developed advanced pagination and filtering systems",
+      "Maintained high code quality standards with consistent team practices"
     ],
     "stats": {
       "teamSize": "4+",
-      "endpoints": "15+",
-      "modules": "5", 
-      "filterParams": "8+",
-      "coverage": "100%"
+      "apiEndpoints": "8+",
+      "components": "20+",
+      "pages": "3",
+      "features": "15+"
     },
     "codeExamples": {
-      "aggregation": "const pipeline = [\n  { $match: { category: \"sell\", sex: \"female\" } },\n  { $skip: skip },\n  { $limit: limit },\n  { $sort: { createdAt: -1 } }\n];\n\nconst noticesList = await Notice.aggregate(pipeline);",
-      "cloudinary": "const storage = new CloudinaryStorage({\n  cloudinary: cloudinary,\n  params: {\n    folder: \"petsshop\",\n    transformation: [{ width: 500, height: 500 }]\n  }\n});",
-      "middleware": "const authenticate = async (req, res, next) => {\n  const { authorization = '' } = req.headers;\n  const [bearer, token] = authorization.split(' ');\n  \n  if (bearer !== 'Bearer' || !token) {\n    return res.status(401).json({ message: \"Not authorized\" });\n  }\n  \n  try {\n    const { id } = jwt.verify(token, process.env.JWT_SECRET);\n    const user = await User.findById(id);\n    req.user = user;\n    next();\n  } catch (err) {\n    res.status(401).json({ message: \"Invalid token\" });\n  }\n};"
+      "apiService": "class FethNewsService {\n  constructor() {\n    this.section = '';\n    this.page = 0;\n  }\n\n  async fetchNews() {\n    const response = await fetch(\n      `${ENDPOINT_CATEGORY}${this.section}.json?${CATEGORY_PARAM}&offset=${this.page}&${CATEGORY_KEY}`\n    );\n    this.incrementPage();\n    return response;\n  }\n}",
+      "localStorage": "const save = (key, value) => {\n  try {\n    const serializedState = JSON.stringify(value);\n    localStorage.setItem(key, serializedState);\n  } catch (error) {\n    console.error('Set state error: ', error.message);\n  }\n};\n\nconst load = key => {\n  try {\n    const serializedState = localStorage.getItem(key);\n    return serializedState === null ? undefined : JSON.parse(serializedState);\n  } catch (error) {\n    console.error('Get state error: ', error.message);\n  }\n};",
+      "weatherWidget": "async function weatherByGeo(position) {\n  const latitude = position.coords.latitude;\n  const longitude = position.coords.longitude;\n  \n  const url = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${WEATHER_KEY}&units=metric`;\n  \n  const response = await fetch(url);\n  const data = await response.json();\n  \n  getWeatherRender(response, data);\n}"
     }
   }
 }

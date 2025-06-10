@@ -1,75 +1,74 @@
 {
   "id": "images",
-  "title": "Search images",
-  "description": "Backend for pet service", 
-  "stack": "Node.js, MongoDB, Mongoose, Swagger, Express, JWT",
-  "link": "https://github.com/VikaSemenchuk/yourPets-backend",
+  "title": "Image Search Gallery",
+  "description": "Vanilla JavaScript application for searching and displaying images with gallery functionality",
+  "stack": "Vanilla JavaScript, Pixabay API, SimpleLightbox, Notiflix, Parcel",
+  "link": "https://github.com/VikaSemenchuk/goit-js-hw-11",
   "image": "/projects/images.png",
   "featured": true,
-  "role": "Developer",
+  "role": "Frontend Developer",
   "detailed": {
-    "overview": "YourPets is a full-featured web platform for searching and posting pet adoption ads, developed as a graduation project for the GoIT course. The project connects pet owners looking for new homes for their beloved animals with people who want to adopt a pet. Built using modern technologies and real business requirements.",
-    "myRole": "Led a team of 4+ developers in the GoIT final project, coordinated work between frontend and backend, responsible for project architecture, code review, task distribution and quality control. Personally developed the backend: REST API, MongoDB, authentication, Cloudinary integration. The project was executed according to real technical requirements following industry standards.",
+    "overview": "Image Search Gallery is a vanilla JavaScript application that allows users to search for high-quality images using the Pixabay API. The project features an infinite scroll mechanism with pagination, lightbox gallery functionality, and a responsive grid layout. Built without frameworks to demonstrate pure JavaScript skills and modern web development techniques.",
+    "myRole": "Developed the complete frontend application using vanilla JavaScript and modern ES6+ features. Implemented API integration with Pixabay, created responsive UI components, integrated lightbox functionality, and ensured smooth user experience with loading states and error handling. Focused on clean, modular code architecture without using any JavaScript frameworks.",
     "technologies": {
-      "backend": [
-        "Node.js + Express.js — server-side and API",
-        "MongoDB + Mongoose — database and ODM", 
-        "JWT — authentication and authorization",
-        "bcrypt — password hashing",
-        "Cloudinary — image storage and processing",
-        "Multer — file uploads"
+      "frontend": [
+        "Vanilla JavaScript ES6+ — modern JavaScript features and syntax",
+        "HTML5 & CSS3 — semantic markup and modern styling",
+        "SCSS — CSS preprocessor for better styling organization",
+        "Parcel — modern build tool for bundling and optimization",
+        "Modern Normalize — consistent cross-browser styling"
+      ],
+      "libraries": [
+        "Axios — HTTP client for API requests",
+        "SimpleLightbox — elegant lightbox gallery functionality",
+        "Notiflix — user-friendly notifications and alerts",
+        "Pixabay API — high-quality image search and retrieval"
       ],
       "architecture": [
-        "RESTful API with thoughtful endpoint structure",
-        "Middleware pattern for authentication and validation",
-        "Error handling with centralized error processing", 
-        "Pagination for optimizing large lists",
-        "Search & Filtering with flexible parameters"
-      ],
-      "dataManagement": [
-        "MongoDB Aggregation Pipeline for complex queries",
-        "Schema Design with validation and indexes",
-        "File Upload with automatic image optimization",
-        "Data Relationships between users, pets, and notices"
+        "Modular JavaScript architecture with ES6 classes",
+        "Separation of concerns with dedicated service classes",
+        "Event-driven programming with proper event handling",
+        "Responsive grid layout with CSS Grid and Flexbox",
+        "Progressive enhancement and graceful degradation"
       ]
     },
     "features": [
       {
-        "title": "User System",
-        "description": "Registration and authorization with JWT tokens, user profile with editing capabilities, avatar upload and change, secure password storage with bcrypt"
+        "title": "Image Search & Discovery",
+        "description": "Search for high-quality images using keywords, view search results in a responsive grid layout, automatic image optimization and lazy loading, smooth infinite scroll for loading more results"
       },
       {
-        "title": "Notice Management", 
-        "description": "CRUD operations for pet notices, categories: sell, free, lost-found, filtering by gender, age, location, search by title and pet type"
+        "title": "Gallery Experience",
+        "description": "Lightbox gallery with navigation controls, full-screen image viewing with zoom capabilities, keyboard navigation support, image metadata display (likes, views, downloads, comments)"
       },
       {
-        "title": "Personal Pets",
-        "description": "Adding personal pets, photo gallery, information about age, type, comments"
+        "title": "User Interface & UX",
+        "description": "Clean, responsive design that works on all devices, loading animations and user feedback, error handling with informative messages, smooth transitions and hover effects"
       },
       {
-        "title": "Additional Modules",
-        "description": "Partner organizations catalog, pet news with search, pagination for all lists"
+        "title": "Performance & Optimization",
+        "description": "Efficient API calls with pagination, image lazy loading for better performance, debounced search to reduce API calls, optimized bundle size with Parcel"
       }
     ],
     "achievements": [
-      "Led a team of 4+ developers, ensuring frontend/backend synchronization",
-      "Organized code review process and established code quality standards", 
-      "Designed the architecture of the entire project and distributed tasks among the team",
-      "Implemented complex backend system with 15+ endpoints and integrations",
-      "Ensured deadline adherence and successful product deployment",
-      "Created detailed technical documentation and API specification"
+      "Built a fully functional image search application using only vanilla JavaScript",
+      "Implemented efficient pagination system with infinite scroll functionality",
+      "Created responsive design that adapts to all screen sizes and devices",
+      "Integrated external API with proper error handling and rate limiting",
+      "Achieved smooth user experience with loading states and animations",
+      "Maintained clean, modular code structure without using any frameworks"
     ],
     "stats": {
-      "teamSize": "4+",
-      "endpoints": "15+",
-      "modules": "5", 
-      "filterParams": "8+",
-      "coverage": "100%"
+      "jsClasses": "3",
+      "apiEndpoints": "1",
+      "responsiveBreakpoints": "3",
+      "imagesPerPage": "40",
+      "bundleSize": "< 100KB"
     },
     "codeExamples": {
-      "aggregation": "const pipeline = [\n  { $match: { category: \"sell\", sex: \"female\" } },\n  { $skip: skip },\n  { $limit: limit },\n  { $sort: { createdAt: -1 } }\n];\n\nconst noticesList = await Notice.aggregate(pipeline);",
-      "cloudinary": "const storage = new CloudinaryStorage({\n  cloudinary: cloudinary,\n  params: {\n    folder: \"petsshop\",\n    transformation: [{ width: 500, height: 500 }]\n  }\n});",
-      "middleware": "const authenticate = async (req, res, next) => {\n  const { authorization = '' } = req.headers;\n  const [bearer, token] = authorization.split(' ');\n  \n  if (bearer !== 'Bearer' || !token) {\n    return res.status(401).json({ message: \"Not authorized\" });\n  }\n  \n  try {\n    const { id } = jwt.verify(token, process.env.JWT_SECRET);\n    const user = await User.findById(id);\n    req.user = user;\n    next();\n  } catch (err) {\n    res.status(401).json({ message: \"Invalid token\" });\n  }\n};"
+      "apiService": "export default class ImagesApiService {\n  constructor() {\n    this.page = 1;\n    this.searchQuery = '';\n    this.perPage = 40;\n  }\n\n  async getImages() {\n    const URL = `${ENDPOINT}?key=${API_KEY}&q=${this.searchQuery}&image_type=photo&orientation=horizontal&safesearch=true&per_page=${this.perPage}&page=${this.page}`;\n    const response = await axios.get(URL);\n    this.nextPage();\n    return response.data;\n  }\n}",
+      "loadMoreButton": "export default class LoadMoreBtn {\n  constructor({ selector, isHidden }) {\n    this.button = this.getButton(selector);\n    isHidden ? this.hide() : this.show();\n  }\n\n  disable() {\n    this.button.disabled = true;\n    this.button.textContent = 'Loading...';\n  }\n\n  enable() {\n    this.button.disabled = false;\n    this.button.textContent = 'Load more';\n  }\n}",
+      "imageMarkup": "export function createMarkup({ webformatURL, largeImageURL, tags, likes, views, comments, downloads }) {\n  return `\n    <div class=\"photo-card\">\n      <a class=\"gallery__link\" href=\"${largeImageURL}\">\n        <img src=\"${webformatURL}\" alt=\"${tags}\" loading=\"lazy\" width=\"100%\" />\n      </a>\n      <div class=\"info\">\n        <p class=\"info-item\"><b>Likes</b> ${likes}</p>\n        <p class=\"info-item\"><b>Views</b> ${views}</p>\n        <p class=\"info-item\"><b>Comments</b> ${comments}</p>\n        <p class=\"info-item\"><b>Downloads</b> ${downloads}</p>\n      </div>\n    </div>\n  `;\n}"
     }
   }
 }
