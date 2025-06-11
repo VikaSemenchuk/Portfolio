@@ -3,12 +3,11 @@
 @import "./base/typography.css";
 @import "./base/layout.css";
 
-@import "./pages/projects.css";
-
 @import "./components/buttons.css";
 @import "./components/navigation.css";
 @import "./components/controls.css";
 @import "./components/mobile-menu.css";
+@import "./components/projects.css";
 
 @import "./utilities/transitions.css";
 @import "./utilities/animations.css";

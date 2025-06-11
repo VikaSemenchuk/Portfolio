@@ -2,9 +2,9 @@ import { create} from 'zustand';
 import { persist } from 'zustand/middleware';
 
 import { Theme } from '@/types'
-import { ThemeState } from '@/types/interfaces';
+import { ThemeState } from '@/types';
 
-import {getStoredValue} from '@/utils';
+import { getStoredValue } from '@/utils';
 
 export const useThemeStore = create<ThemeState> ()(
     persist (

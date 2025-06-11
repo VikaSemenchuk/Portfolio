@@ -58,7 +58,8 @@
      "projectNamespaces": [
       "petsProject",
       "newsProject", 
-      "imagesProject"
+      "imagesProject",
+      "moviesProject"
     ],
     "collaborate": {
       "title": "Хочеш співпрацювати?",

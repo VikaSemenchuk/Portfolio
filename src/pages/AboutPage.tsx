@@ -1,10 +1,11 @@
-import { AboutHero, AboutContacts, AboutQualificationsSection } from "@/components";
+import { AboutHero, AboutContacts, AboutQualificationsSection, ProjectSlider } from "@/components";
 
 const AboutPage = () => {
   return (
     <>
       <AboutHero />
       <AboutContacts />
+      <ProjectSlider/>
       <AboutQualificationsSection />
     </>
   );
