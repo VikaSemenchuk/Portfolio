@@ -1,5 +1,4 @@
 import { motion } from 'framer-motion';
-import { MapPin } from 'lucide-react';
 
 interface TimelineItemProps {
   item: {
@@ -14,72 +13,88 @@ interface TimelineItemProps {
 }
 
 const TimelineItem = ({ item, index }: TimelineItemProps) => {
+
+  const getIcon = (category: string) => {
+    switch (category) {
+      case 'education': return '🎓';
+      case 'finance': return '🏛️';
+      case 'transition': return '🏢';
+      case 'it': return '💻';
+      default: return '📍';
+    }
+  };
+
+ 
+  const getPeriodClass = (category: string) => {
+    return `period-badge period-badge--${category}`;
+  };
+
   return (
-    <motion.div
-      className={`relative flex flex-col md:flex-row items-start ${
-        index % 2 === 0 ? 'md:flex-row-reverse' : ''
-      }`}
-      initial={{ opacity: 0, y: 30 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5, delay: index * 0.1 }}
+    <motion.div 
+      className="timeline-item"
+      initial={{ opacity: 0, x: 30 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      transition={{ 
+        delay: index * 0.1,
+        duration: 0.6,
+        ease: "easeOut"
+      }}
       viewport={{ once: true }}
     >
-      {/* Timeline Node */}
-      <div className="absolute left-8 md:left-1/2 md:transform md:-translate-x-1/2 w-4 h-4 bg-accent rounded-full border-4 border-background shadow-lg z-10" />
-      
-      {/* Content Card */}
-      <div className={`w-full md:w-5/12 ml-16 md:ml-0 ${
-        index % 2 === 0 ? 'md:pr-12' : 'md:pl-12'
-      }`}>
-        <div className="bg-surface p-6 rounded-2xl shadow-soft border border-border hover:shadow-lg transition-all duration-300">
-          
-          {/* Period */}
-          <div className={`inline-flex items-center px-3 py-1 rounded-full text-sm font-semibold mb-4 ${
-            item.category === 'education' ? 'text-accent bg-accent/10' :
-            item.category === 'finance' ? 'text-blue-600 bg-blue-600/10' :
-            item.category === 'transition' ? 'text-orange-600 bg-orange-600/10' :
-            'text-green-600 bg-green-600/10'
-          }`}>
+     
+      <motion.div 
+        className={`timeline-node ${index === 4 ? 'active' : ''}`}
+        whileHover={{ scale: 1.2 }}
+        transition={{ type: "spring", stiffness: 300 }}
+      >
+        {getIcon(item.category)}
+      </motion.div>
+
+    
+      <motion.div 
+        className="timeline-card"
+        whileHover={{ x: 15 }}
+        transition={{ type: "spring", stiffness: 300 }}
+      >
+        <div className="timeline-card-header">
+          <div className={getPeriodClass(item.category)}>
             {item.period}
           </div>
-
-          {/* Title */}
-          <h3 className="text-xl font-bold text-text mb-2">
-            {item.title}
-          </h3>
-
-          {/* Company */}
-          <div className="flex items-center gap-2 text-text-secondary font-medium mb-4">
-            <MapPin className="w-4 h-4" />
+          <h3 className="timeline-card-title">{item.title}</h3>
+          <div className="timeline-card-company">
+            <div className="company-icon"></div>
             {item.company}
           </div>
-
-          {/* Description */}
+        </div>
+        
+        <div className="timeline-card-content">
           <div 
-            className="text-text-secondary leading-relaxed mb-4"
-            dangerouslySetInnerHTML={{ 
-              __html: item.description.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>') 
-            }}
+            className="timeline-card-description"
+            dangerouslySetInnerHTML={{ __html: item.description }}
           />
-
-          {/* Tasks */}
+          
           {item.tasks && (
-            <ul className="space-y-2">
+            <ul className="timeline-task-list">
               {item.tasks.map((task, taskIndex) => (
-                <li key={taskIndex} className="flex items-start gap-3 text-sm text-text-secondary">
-                  <div className={`w-2 h-2 rounded-full mt-2 flex-shrink-0 ${
-                    item.category === 'education' ? 'bg-accent' :
-                    item.category === 'finance' ? 'bg-blue-600' :
-                    item.category === 'transition' ? 'bg-orange-600' :
-                    'bg-green-600'
-                  }`} />
+                <motion.li 
+                  key={taskIndex} 
+                  className="timeline-task-item"
+                  initial={{ opacity: 0, x: 20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ 
+                    delay: (index * 0.1) + (taskIndex * 0.05),
+                    duration: 0.4
+                  }}
+                  viewport={{ once: true }}
+                >
+                  <span className="timeline-task-bullet"></span>
                   {task}
-                </li>
+                </motion.li>
               ))}
             </ul>
           )}
         </div>
-      </div>
+      </motion.div>
     </motion.div>
   );
 };
