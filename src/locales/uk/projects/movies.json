@@ -67,7 +67,7 @@
       "codeQuality": "відповідає ESLint"
     },
     "codeExamples": {
-      "apiService": "const moviesAPI = axios.create({\n  baseURL: 'https://api.themoviedb.org/3/',\n  params: {\n    api_key: 'f0f166877cbfe2faaaf5104584f5709ced',\n  },\n});\n\nexport const APIgetTrandingMovies = async () => {\n  const response = await moviesAPI.get(`trending/movie/day`);\n  return response.data.results;\n};",
+      "apiService": "const moviesAPI = axios.create({\n  baseURL: 'https://api.themoviedb.org/3/',\n  params: {\n    api_key: 'YOUR_API_KEY_HERE',\n  },\n});\n\nexport const APIgetTrandingMovies = async () => {\n  const response = await moviesAPI.get(`trending/movie/day`);\n  return response.data.results;\n};",
       "routing": "const App = () => {\n  return (\n    <Routes>\n      <Route path=\"/\" element={<Layout />}>\n        <Route index element={<LazyHomePage />} />\n        <Route path=\"movies\" element={<LazyMoviesPage />} />\n        <Route path=\"movies/:movieId\" element={<LazyMovieDetailsPage />}>\n          <Route path=\"cast\" element={<LazyMovieCast />} />\n          <Route path=\"review\" element={<LazyMovieReview />} />\n        </Route>\n      </Route>\n    </Routes>\n  );\n};",
       "styledComponents": "export const StyledMovieLink = styled(Link)`\n  min-height: 600px;\n  text-decoration: none;\n  color: black;\n  \n  &:hover {\n    transform: scale(1.03);\n    cursor: zoom-in;\n  }\n`;"
     }

@@ -1,7 +1,7 @@
-import { useState } from "react";
+import React, { useState, useRef } from "react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
-
+import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 import { useProjects, useProjectsLoading } from "@/store/useProjectsStore";
 import { useProjectsInit } from "@/hooks/useProjectsInit";
 import ProjectCard from "./ProjectCard";
@@ -10,116 +10,147 @@ const ProjectSlider: React.FC = () => {
   const { t: tPages } = useTranslation('pages');
   const { t: tCommon } = useTranslation('common');
   
- 
   useProjectsInit();
   
   const projects = useProjects();
   const isLoading = useProjectsLoading();
+  
+  const sliderRef = useRef<HTMLDivElement>(null);
+  const [canScrollLeft, setCanScrollLeft] = useState(false);
+  const [canScrollRight, setCanScrollRight] = useState(true);
 
-  const [current, setCurrent] = useState<number>(0);
-  const length = projects.length;
+  const scrollAmount = 320;
 
-  const nextSlide = () => setCurrent((prev) => (prev + 1) % length);
-  const prevSlide = () => setCurrent((prev) => (prev - 1 + length) % length);
+  const scrollLeft = () => {
+    if (sliderRef.current) {
+      sliderRef.current.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+    }
+  };
+
+  const scrollRight = () => {
+    if (sliderRef.current) {
+      sliderRef.current.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+    }
+  };
+
+  const handleScroll = () => {
+    if (sliderRef.current) {
+      const { scrollLeft, scrollWidth, clientWidth } = sliderRef.current;
+      setCanScrollLeft(scrollLeft > 0);
+      setCanScrollRight(scrollLeft < scrollWidth - clientWidth - 10);
+    }
+  };
 
   if (isLoading) {
     return (
-      <section className="section">
-        <div className="text-center space-y-6">
-          <h2 className="text-3xl font-semibold">
+      <section className="py-12">
+        <div className="max-w-7xl mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center mb-8">
             🚀 {tPages("projects.title")}
           </h2>
-          <div className="max-w-6xl mx-auto border-2 border-accent rounded-xl p-6 shadow-lg bg-footer text-text">
-            <p className="text-lg">Loading projects...</p>
+          <div className="bg-white dark:bg-gray-800 border-2 border-blue-500 rounded-lg p-8 text-center shadow-lg">
+            <div className="flex items-center justify-center gap-3">
+              <div className="w-6 h-6 border-2 border-blue-500 border-t-transparent rounded-full 
+                            animate-spin skeleton-loader"></div>
+              <p className="text-lg">Loading projects...</p>
+            </div>
           </div>
         </div>
       </section>
     );
   }
 
-  if (length === 0) {
+  if (projects.length === 0) {
     return (
-      <section className="section">
-        <div className="text-center space-y-6">
-          <h2 className="text-3xl font-semibold">
+      <section className="py-12">
+        <div className="max-w-7xl mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center mb-8">
             🚀 {tPages("projects.title")}
           </h2>
-          <div className="max-w-6xl mx-auto border-2 border-accent rounded-xl p-6 shadow-lg bg-footer text-text">
-            <p className="text-lg">No projects available</p>
+          <div className="bg-white dark:bg-gray-800 border-2 border-blue-500 rounded-lg p-8 text-center shadow-lg">
+            <p className="text-lg text-gray-600 dark:text-gray-300">No projects available</p>
           </div>
         </div>
       </section>
     );
   }
-
-  const currentProject = projects[current];
 
   return (
-    <section className="section">
-      <div className="text-center space-y-6">
-        <h2 className="text-3xl font-semibold">
-          🚀 {tPages("projects.title")}
-        </h2>
+    <section className="py-12">
+      <div className="max-w-7xl mx-auto px-4">
+        <div className="text-center mb-8">
+          <h2 className="text-3xl font-bold mb-4">
+            🚀 {tPages("projects.title")}
+          </h2>
+          <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+            A collection of projects showcasing different technologies and skills
+          </p>
+        </div>
 
-        <div className="relative max-w-6xl mx-auto">
-          <ProjectCard
-            project={currentProject}
-            variant="slider"
-            showActions={true}
-          />
+        <div className="relative">
+          {/* Navigation buttons */}
+          <button
+            onClick={scrollLeft}
+            disabled={!canScrollLeft}
+            className={`absolute left-0 top-1/2 -translate-y-1/2 z-10 w-10 h-10 bg-white dark:bg-gray-800 
+                       border border-gray-200 dark:border-gray-700 rounded-full shadow-lg 
+                       flex items-center justify-center transition-all duration-200 focus-ring btn-press
+                       ${canScrollLeft 
+                         ? 'hover:bg-gray-50 dark:hover:bg-gray-700 text-gray-700 dark:text-gray-300' 
+                         : 'opacity-50 cursor-not-allowed text-gray-400'}`}
+            aria-label="Scroll left"
+          >
+            <FiChevronLeft className="w-5 h-5" />
+          </button>
 
-          {/* Navigation Controls */}
-          <div className="flex justify-between items-center mt-6">
-            <button 
-              onClick={prevSlide} 
-              className="btn-secondary"
-              aria-label="Previous project"
-              disabled={length <= 1}
-            >
-              ←
-            </button>
-            
-            {/* Dots Indicator */}
-            <div className="flex items-center gap-2">
-              {projects.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => setCurrent(index)}
-                  className={`w-2 h-2 rounded-full transition-colors ${
-                    index === current ? 'bg-accent' : 'bg-border'
-                  }`}
-                  aria-label={`Go to project ${index + 1}`}
+          <button
+            onClick={scrollRight}
+            disabled={!canScrollRight}
+            className={`absolute right-0 top-1/2 -translate-y-1/2 z-10 w-10 h-10 bg-white dark:bg-gray-800 
+                       border border-gray-200 dark:border-gray-700 rounded-full shadow-lg 
+                       flex items-center justify-center transition-all duration-200 focus-ring btn-press
+                       ${canScrollRight 
+                         ? 'hover:bg-gray-50 dark:hover:bg-gray-700 text-gray-700 dark:text-gray-300' 
+                         : 'opacity-50 cursor-not-allowed text-gray-400'}`}
+            aria-label="Scroll right"
+          >
+            <FiChevronRight className="w-5 h-5" />
+          </button>
+
+          {/* Horizontal scroller */}
+          <div
+            ref={sliderRef}
+            onScroll={handleScroll}
+            className="flex gap-4 overflow-x-auto scrollbar-hide scroll-smooth px-12 py-4"
+            style={{ 
+              scrollbarWidth: 'none',
+              msOverflowStyle: 'none'
+            }}
+          >
+            {projects.map((project) => (
+              <div
+                key={project.id}
+                className="flex-shrink-0 w-80 mobile-card-spacing"
+              >
+                <ProjectCard
+                  project={project}
+                  showActions={true}
                 />
-              ))}
-            </div>
-            
-            <button 
-              onClick={nextSlide} 
-              className="btn-secondary"
-              aria-label="Next project"
-              disabled={length <= 1}
-            >
-              →
-            </button>
+              </div>
+            ))}
           </div>
         </div>
 
-        {/* Action Buttons */}
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Link to="/projects">
-            <button className="btn">
-              {tCommon("buttons.allProjects")} →
-            </button>
+        {/* Action buttons */}
+        <div className="flex flex-col sm:flex-row gap-4 justify-center mt-12">
+          <Link 
+            to="/projects"
+            className="inline-flex items-center justify-center gap-2 px-6 py-3 
+                     bg-blue-500 text-white rounded-lg font-medium 
+                     hover:bg-blue-600 transition-colors shadow-md focus-ring btn-press"
+          >
+            {tCommon("buttons.allProjects")} →
           </Link>
-          
-          {/* Link to current project details */}
-          {currentProject?.hasDetails && (
-            <Link to={`/projects/${currentProject.id}`}>
-              <button className="btn-control">
-                {tCommon("buttons.viewDetails")} →
-              </button>
-            </Link>
-          )}
         </div>
       </div>
     </section>
