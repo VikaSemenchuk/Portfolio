@@ -13,7 +13,7 @@ const AboutHero = () => {
             className="section pt-8 pb-16"
             variants={sectionVariant}
             initial="hidden"
-            animate="visible"
+            whileInView="visible"
         >
             <div className="container">
                 <div className="max-w-6xl mx-auto">

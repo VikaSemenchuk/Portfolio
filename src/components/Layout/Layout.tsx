@@ -1,5 +1,5 @@
 import { Suspense, useEffect } from "react";
-import { Outlet } from "react-router-dom";
+import { Outlet, useLocation } from "react-router-dom";
 
 import { Header, Footer } from '@/components/Layout'
 
@@ -7,10 +7,16 @@ import { useLanguageStore } from "@/store";
 
 const Layout = () => {
   const language = useLanguageStore((state) => state.language);
+   const location = useLocation();
 
   useEffect(() => {
     document.documentElement.lang = language;
   }, [language]);
+
+
+  useEffect(() => {
+  window.scrollTo(0, 0);
+  }, [location.pathname]);
 
   return (
     <>

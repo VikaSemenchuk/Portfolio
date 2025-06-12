@@ -4,7 +4,7 @@ import { useEffect } from 'react';
 const CareerPathPage = () => {
   useEffect(() => {
    
-    window.scrollTo(0, 0);
+    // window.scrollTo(0, 0);
 
    
     const observerOptions = {

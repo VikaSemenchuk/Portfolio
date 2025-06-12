@@ -7,7 +7,7 @@ const AboutAvatar = () => {
         <div className="flex justify-center lg:justify-end">
             <motion.div
                 initial={{ scale: 0.5, opacity: 0, rotateY: 20 }}
-                animate={{ scale: 1, opacity: 1, rotateY: 0 }}
+                whileInView={{ scale: 1, opacity: 1, rotateY: 0 }}
                 transition={{ duration: 0.8, ease: "easeOut" }}
                 className="relative group"
             >

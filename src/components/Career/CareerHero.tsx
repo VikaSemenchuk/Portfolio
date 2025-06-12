@@ -10,7 +10,7 @@ const CareerHero = () => {
       <motion.section 
         className="career-hero"
         initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
+        whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
       >
         <div className="container">
@@ -18,7 +18,7 @@ const CareerHero = () => {
             <motion.h1 
               className="career-hero-title"
               initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
             >
               {t('career:title')}
@@ -27,7 +27,7 @@ const CareerHero = () => {
             <motion.p 
               className="career-hero-subtitle"
               initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4 }}
             >
               {t('career:subtitle')}
@@ -40,7 +40,7 @@ const CareerHero = () => {
       <motion.section 
         className="career-stats"
         initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0 }}
+        whileInView={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.6, duration: 0.6 }}
       >
         <div className="container">
@@ -48,7 +48,7 @@ const CareerHero = () => {
             <motion.div 
               className="stat-item"
               initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
+              whileInView={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.7 }}
             >
               <span className="stat-number">2+</span>
@@ -57,7 +57,7 @@ const CareerHero = () => {
             <motion.div 
               className="stat-item"
               initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
+              whileInView={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.8 }}
             >
               <span className="stat-number">3+</span>
@@ -66,7 +66,7 @@ const CareerHero = () => {
             <motion.div 
               className="stat-item"
               initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
+              whileInView={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.9 }}
             >
               <span className="stat-number">8+</span>
@@ -75,7 +75,7 @@ const CareerHero = () => {
             <motion.div 
               className="stat-item"
               initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
+              whileInView={{ opacity: 1, scale: 1 }}
               transition={{ delay: 1.0 }}
             >
               <span className="stat-number">100%</span>

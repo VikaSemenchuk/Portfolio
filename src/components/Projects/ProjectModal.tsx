@@ -84,7 +84,7 @@ const ProjectModal = ({ project, isOpen, onClose }: ProjectModalProps) => {
             className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50"
             variants={backdropVariants}
             initial="hidden"
-            animate="visible"
+            whileInView="visible"
             exit="exit"
             onClick={onClose}
           />
@@ -95,7 +95,7 @@ const ProjectModal = ({ project, isOpen, onClose }: ProjectModalProps) => {
               className="bg-background border border-border rounded-xl shadow-2xl w-full max-w-4xl max-h-[90vh] overflow-hidden"
               variants={modalVariants}
               initial="hidden"
-              animate="visible"
+              whileInView="visible"
               exit="exit"
               onClick={(e) => e.stopPropagation()}
             >
