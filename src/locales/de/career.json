@@ -1,0 +1,99 @@
+{
+  "title": "🚀 Mein Weg in die IT",
+  "subtitle": "Vom analytischen Denken im Finanzwesen zur Entwicklung digitaler Lösungen in der IT",
+  "timeline": [
+    {
+      "period": "2007 - 2012",
+      "title": "🎓 Master in Buchhaltung & Wirtschaftsprüfung",
+      "company": "TNEU, Czernowitz",
+      "category": "education",
+      "description": "Grundlegende Ausbildung in analytischem Denken, Datenarbeit und systematischem Problemlösungsansatz.",
+      "tasks": [
+        "Erlernen der Prinzipien der Datenanalyse",
+        "Entwicklung strukturierter Denkfähigkeiten",
+        "Arbeit mit Finanzberichten"
+      ]
+    },
+    {
+      "period": "12/2011 - 09/2013",
+      "title": "💼 Bankkassiererin",
+      "company": "Nadra Bank",
+      "category": "finance",
+      "description": "Beginn des beruflichen Weges im Finanzsektor:",
+      "tasks": [
+        "Durchführung von Bankoperationen für Firmenkunden",
+        "Internationale Überweisungen",
+        "Arbeit mit Dokumentation und Berichterstattung"
+      ]
+    },
+    {
+      "period": "09/2013 - 02/2015",
+      "title": "🏛️ Leitende Bankkassiererin",
+      "company": "VAB-Bank",
+      "category": "finance",
+      "description": "Karrierewachstum und erweiterte Verantwortlichkeiten:",
+      "tasks": [
+        "Verwaltung von Kassaoperationen",
+        "Kontrolle des Dokumentenflusses",
+        "Geldtransporte und Operationssicherheit"
+      ]
+    },
+    {
+      "period": "02/2015 - 08/2015",
+      "title": "📊 Kundenbeziehungsmanagerin",
+      "company": "VAB-Bank",
+      "category": "finance",
+      "description": "Übergang zur kundenorientierten Arbeit:",
+      "tasks": [
+        "Eröffnung von Einlagen- und Kartenkonten",
+        "Vertragsabschluss mit Kunden",
+        "Beratung zu Bankprodukten"
+      ]
+    },
+    {
+      "period": "09/2015 - 11/2021",
+      "title": "🏢 Mitarbeit im Familienunternehmen",
+      "company": "Handel mit Baumaterialien",
+      "category": "transition",
+      "description": "Anwendung analytischer Fähigkeiten im Geschäftsumfeld:",
+      "tasks": [
+        "Marktdaten- und Trendanalyse",
+        "Bestandsverwaltung",
+        "Optimierung von Beschaffungsprozessen"
+      ]
+    },
+    {
+      "period": "08/2022 - heute",
+      "title": "💻 IT-Übergang & Entwicklung",
+      "company": "Fullstack-Entwicklerin",
+      "category": "it",
+      "description": "**2022-2023:** Intensives Lernen bei GoIT<br>**2023-2024:** Deutschlernen (B1 → B2)<br>**2025:** Vertiefung TypeScript, React Native, SQL",
+      "tasks": [
+        "Erfolgreich abgeschlossener Fullstack-Entwicklerkurs",
+        "Erstellung realer Projekte mit modernem Tech-Stack",
+        "Teamleitung im Abschlussprojekt"
+      ]
+    }
+  ],
+  "skills": {
+    "title": "🛠️ Aktueller Tech Stack",
+    "frontend": {
+      "title": "Frontend",
+      "items": ["HTML5", "CSS3/SASS", "JavaScript", "TypeScript", "React"]
+    },
+    "backend": {
+      "title": "Backend",
+      "items": ["Node.js", "Express", "MongoDB", "Mongoose", "REST API"]
+    },
+    "tools": {
+      "title": "Tools",
+      "items": ["Git", "Webpack", "Vite", "Parcel"]
+    }
+  },
+  "cta": {
+    "title": "🚀 Bereit für neue Herausforderungen!",
+    "description": "Auf der Suche nach Möglichkeiten, meine Fähigkeiten bei der Entwicklung innovativer Lösungen und der Arbeit mit einem Profi-Team einzusetzen.",
+    "buttonText": "Kontakt aufnehmen",
+    "email": "Viktoriia.semenchuk.dev@gmail.com"
+  }
+}

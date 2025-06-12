@@ -66,8 +66,9 @@
       "description": "Ich bin immer offen für neue Möglichkeiten und spannende Projekte. Lass uns gemeinsam etwas Großartiges schaffen!"
     }
   },
-  "career": {
+   "career": {
     "title": "Mein Weg in die IT",
+    "subtitle": "Berufliche Entwicklung vom Finanzsektor zur Technologie",
     "content": "Hier ist mein Weg in die IT"
   }
 }

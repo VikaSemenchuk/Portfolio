@@ -1,0 +1,99 @@
+{
+  "title": "🚀 My Path to IT",
+  "subtitle": "From analytical thinking in finance to creating digital solutions in IT",
+  "timeline": [
+    {
+      "period": "2007 - 2012",
+      "title": "🎓 Master's in Accounting & Auditing",
+      "company": "TNEU, Chernivtsi",
+      "category": "education",
+      "description": "Gained foundational education in analytical thinking, data work, and systematic approach to problem-solving.",
+      "tasks": [
+        "Learning data analysis principles",
+        "Developing structured thinking skills",
+        "Working with financial reporting"
+      ]
+    },
+    {
+      "period": "12/2011 - 09/2013",
+      "title": "💼 Bank Cashier",
+      "company": "Nadra Bank",
+      "category": "finance",
+      "description": "Beginning of professional path in financial sector:",
+      "tasks": [
+        "Performing banking operations for corporate clients",
+        "International transfers",
+        "Working with documentation and reporting"
+      ]
+    },
+    {
+      "period": "09/2013 - 02/2015",
+      "title": "🏛️ Senior Bank Cashier",
+      "company": "VAB-Bank",
+      "category": "finance",
+      "description": "Career growth and expanded responsibilities:",
+      "tasks": [
+        "Managing cash operations",
+        "Document flow control",
+        "Cash collection and operation security"
+      ]
+    },
+    {
+      "period": "02/2015 - 08/2015",
+      "title": "📊 Customer Relations Manager",
+      "company": "VAB-Bank",
+      "category": "finance",
+      "description": "Transition to client-oriented work:",
+      "tasks": [
+        "Opening deposit and card accounts",
+        "Contract conclusion with clients",
+        "Banking product consulting"
+      ]
+    },
+    {
+      "period": "09/2015 - 11/2021",
+      "title": "🏢 Family Business Work",
+      "company": "Construction Materials Trading",
+      "category": "transition",
+      "description": "Applying analytical skills in business environment:",
+      "tasks": [
+        "Market data and trends analysis",
+        "Inventory management",
+        "Procurement process optimization"
+      ]
+    },
+    {
+      "period": "08/2022 - present",
+      "title": "💻 IT Transition & Development",
+      "company": "Fullstack Developer",
+      "category": "it",
+      "description": "**2022-2023:** Intensive learning at GoIT<br>**2023-2024:** German language learning (B1 → B2)<br>**2025:** Deepening TypeScript, React Native, SQL knowledge",
+      "tasks": [
+        "Successfully completed Fullstack Developer course",
+        "Created real projects with modern tech stack",
+        "Team leadership in graduation project"
+      ]
+    }
+  ],
+  "skills": {
+    "title": "🛠️ Current Tech Stack",
+    "frontend": {
+      "title": "Frontend",
+      "items": ["HTML5", "CSS3/SASS", "JavaScript", "TypeScript", "React"]
+    },
+    "backend": {
+      "title": "Backend",
+      "items": ["Node.js", "Express", "MongoDB", "Mongoose", "REST API"]
+    },
+    "tools": {
+      "title": "Tools",
+      "items": ["Git", "Webpack", "Vite", "Parcel"]
+    }
+  },
+  "cta": {
+    "title": "🚀 Ready for New Challenges!",
+    "description": "Looking for opportunities to apply my skills in creating innovative solutions and working with a team of professionals.",
+    "buttonText": "Contact Me",
+    "email": "Viktoriia.semenchuk.dev@gmail.com"
+  }
+}

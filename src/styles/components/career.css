@@ -1,0 +1,325 @@
+/* Career Page Base */
+.career-page {
+  min-height: 100vh;
+  background-color: var(--background);
+}
+
+/* Hero Section */
+.career-hero {
+  background: linear-gradient(135deg, rgba(var(--accent-rgb), 0.05), rgba(var(--accent-rgb), 0.08));
+  position: relative;
+}
+
+/* Timeline Styles */
+.timeline-container {
+  position: relative;
+}
+
+.timeline-line {
+  position: absolute;
+  left: 2rem;
+  width: 2px;
+  background: var(--accent);
+  opacity: 0.3;
+}
+
+@media (min-width: 768px) {
+  .timeline-line {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 3rem;
+}
+
+.timeline-node {
+  position: absolute;
+  left: 2rem;
+  transform: translateX(-50%);
+  width: 1rem;
+  height: 1rem;
+  background-color: var(--accent);
+  border: 4px solid var(--background);
+  border-radius: 50%;
+  box-shadow: 0 2px 8px var(--shadow);
+  z-index: 10;
+  transition: all 0.3s ease;
+}
+
+@media (min-width: 768px) {
+  .timeline-node {
+    left: 50%;
+  }
+}
+
+.timeline-node:hover {
+  transform: translateX(-50%) scale(1.2);
+}
+
+.timeline-content {
+  margin-left: 4rem;
+}
+
+@media (min-width: 768px) {
+  .timeline-content {
+    margin-left: 0;
+    width: calc(50% - 1.5rem);
+  }
+  
+  .timeline-item:nth-child(even) .timeline-content {
+    margin-left: calc(50% + 1.5rem);
+  }
+}
+
+/* Timeline Cards */
+.timeline-card {
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px var(--shadow);
+  transition: all 0.3s ease;
+}
+
+.timeline-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px var(--shadow);
+}
+
+/* Period Badges */
+.period-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 0.75rem;
+  border-radius: 2rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.period-badge--education {
+  color: var(--accent);
+  background-color: rgba(var(--accent-rgb), 0.1);
+}
+
+.period-badge--finance {
+  color: #4a8ee6;
+  background-color: rgba(74, 142, 230, 0.1);
+}
+
+.period-badge--transition {
+  color: #f4a261;
+  background-color: rgba(244, 162, 97, 0.1);
+}
+
+.period-badge--it {
+  color: #22c55e;
+  background-color: rgba(34, 197, 94, 0.1);
+}
+
+/* Card Content */
+.card-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 0.5rem;
+}
+
+.card-company {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
+}
+
+.card-description {
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.card-description strong {
+  color: var(--text);
+  font-weight: 600;
+}
+
+/* Task Lists */
+.task-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.task-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  font-size: 0.9rem;
+}
+
+.task-bullet {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  margin-top: 0.5rem;
+  flex-shrink: 0;
+}
+
+.task-bullet--education { background-color: var(--accent); }
+.task-bullet--finance { background-color: #4a8ee6; }
+.task-bullet--transition { background-color: #f4a261; }
+.task-bullet--it { background-color: #22c55e; }
+
+/* Skills Section */
+.skills-section {
+  background: linear-gradient(135deg, rgba(var(--surface-rgb), 0.5), rgba(var(--footer-rgb), 0.5));
+}
+
+.skills-card {
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 8px 25px var(--shadow);
+}
+
+.skills-title {
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  color: var(--text);
+  margin-bottom: 2rem;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.skill-category {
+  text-align: center;
+}
+
+.skill-category-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 1rem;
+}
+
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.skill-tag {
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  background-color: var(--accent);
+  color: var(--background);
+  transition: all 0.3s ease;
+  cursor: default;
+}
+
+.skill-tag:hover {
+  background-color: var(--accent-hover);
+  transform: translateY(-2px);
+}
+
+/* Call to Action */
+.cta-section {
+  padding: 4rem 0;
+}
+
+.cta-card {
+  background-color: var(--footer);
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 8px 25px var(--shadow);
+  max-width: 32rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.cta-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 1rem;
+}
+
+.cta-description {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.cta-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 2rem;
+  border-radius: 0.75rem;
+  font-size: 1rem;
+  font-weight: 600;
+  background-color: var(--accent);
+  color: var(--background);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(var(--accent-rgb), 0.2);
+}
+
+.cta-button:hover {
+  background-color: var(--accent-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(var(--accent-rgb), 0.3);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .timeline-line { left: 1.5rem; }
+  .timeline-node { left: 1.5rem; }
+  .timeline-content { margin-left: 3rem; }
+  .timeline-card { padding: 1.25rem; }
+  .skills-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+  .skill-tags { gap: 0.375rem; }
+  .skill-tag { padding: 0.375rem 0.75rem; font-size: 0.8rem; }
+  .cta-card { padding: 1.5rem; }
+  .cta-button { padding: 0.875rem 1.5rem; font-size: 0.9rem; }
+}
+
+/* Focus States */
+.timeline-card:focus-within,
+.skill-tag:focus,
+.cta-button:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* Print Styles */
+@media print {
+  .career-page { background: white !important; color: black !important; }
+  .timeline-card, .skills-card, .cta-card {
+    background: white !important;
+    border: 1px solid #ddd !important;
+    box-shadow: none !important;
+    break-inside: avoid;
+  }
+  .skill-tag { background: #f0f0f0 !important; color: black !important; }
+  .cta-button { background: #6b8e4a !important; color: white !important; }
+}

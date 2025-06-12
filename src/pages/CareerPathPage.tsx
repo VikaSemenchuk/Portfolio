@@ -1,12 +1,14 @@
-import { useTranslation } from "react-i18next"
+import { CareerHero, CareerTimeline, CareerSkills, CareerCTA } from '@/components';
 
-const CareerPath = () => {
-  const {t} = useTranslation()
+const CareerPathPage = () => {
   return (
-    <h1>
-      {t('path-to-it-page')}
-    </h1>
-  )
-}
+    <div className="min-h-screen bg-background career-page">
+      <CareerHero />
+      <CareerTimeline />
+      <CareerSkills />
+      <CareerCTA />
+    </div>
+  );
+};
 
-export default CareerPath
+export default CareerPathPage;

@@ -6,6 +6,7 @@ export {default as ProjectSlider} from './ProjectSlider';
 
 export {default as ProjectCard} from './ProjectCard'
 
+export * from './UI'
 export * from './About'
 export * from './Projects'
-export * from './UI'
+export * from './Career'

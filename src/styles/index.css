@@ -9,6 +9,8 @@
 @import "./components/mobile-menu.css";
 @import "./components/projects.css";
 
+@import "./components/career.css";
+
 @import "./utilities/transitions.css";
 @import "./utilities/animations.css";
 @import "./utilities/responsive.css";
