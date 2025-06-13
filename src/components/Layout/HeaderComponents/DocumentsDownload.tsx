@@ -5,7 +5,7 @@ const DocumentsDownload = () => {
   const { t: tCommon } = useTranslation('common')
 
   return (
-    <div className="flex gap-6">
+    <>
 
       <a
         href="https://drive.google.com/file/d/1hhTvgPK6XKlWFJprM-Vsiuwfd5icxYla/view?usp=drive_link"
@@ -18,7 +18,7 @@ const DocumentsDownload = () => {
         <span>{tCommon("buttons.cvDocuments")}</span>
       </a>
 
-    </div>
+    </>
   );
 }
 

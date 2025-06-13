@@ -2,9 +2,10 @@ import { Link } from "react-router-dom";
 
 import { useTranslation } from "react-i18next";
 
-import { FiFileText, FiArrowRight } from "react-icons/fi";
+import { FiArrowRight } from "react-icons/fi";
 
 import MyPhoto from "@/assets/hero-photo.png"
+import { DocumentsDownload } from "./Layout";
 // import { LuArrowDownToLine } from "react-icons/lu";
 
 const Hero = () => {
@@ -36,16 +37,8 @@ const Hero = () => {
             </p>
 
             <div className="flex flex-col md:flex-row lg:flex-col  xl:flex-row  md:align-center  gap-4 justify-center lg:justify-start">
-              <a
-                href="https://drive.google.com/file/d/1aLLC6eeCE27seZS7uUGr7bXT13kdzfsD/view?usp=drive_link"
-                target="_blank"
-                rel="noreferrer noopener"
-                className="btn-control justify-start w-[240px] group hover:scale-105 focus-visible:ring-accent focus-visible:ring-2"
-              >
-                {/* <LuArrowDownToLine className="mr-2 h-4 w-4" /> */}
-                <FiFileText className="mr-2 h-5 w-5" />
-                <span>{tCommon("buttons.cvDocuments")}</span>
-              </a>
+
+              <DocumentsDownload />
 
               <Link to="/about">
                 <button className="btn justify-start w-[240px]">

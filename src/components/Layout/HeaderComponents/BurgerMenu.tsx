@@ -1,14 +1,15 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { AnimatePresence, motion } from 'framer-motion';
-import { FileText, Menu, X } from 'lucide-react';
+import {  Menu, X } from 'lucide-react';
 
 import { ThemeToggle, LanguageSwitcher } from '@/components/UI';
 
 import Navigation from './Navigation';
+import DocumentsDownload from './DocumentsDownload';
 
 const MobileMenu = () => {
-  const { t: tCommon } = useTranslation('common');
+  // const { t: tCommon } = useTranslation('common');
   const { t: tNavigation } = useTranslation('navigation');
   const [isOpen, setIsOpen] = useState(false);
 
@@ -71,8 +72,8 @@ const MobileMenu = () => {
                 </div>
 
                 <div className="mt-6 p-6 border-t border-footer/20">
-                  {/* <DocumentsDownload /> */}
-                  <a
+                  <DocumentsDownload />
+                  {/* <a
                     href="https://drive.google.com/file/d/1aLLC6eeCE27seZS7uUGr7bXT13kdzfsD/view?usp=drive_link"
                     target="_blank"
                     rel="noreferrer noopener"
@@ -80,9 +81,9 @@ const MobileMenu = () => {
                     onClick={closeMenu}
                   >
                     {/* <PdfIcon className="w-5 h-5" /> */}
-                    <FileText className="mr-2 h-5 w-5" />
+                    {/* <FileText className="mr-2 h-5 w-5" />
                     <span>{tCommon("buttons.cvDocuments")}</span>
-                  </a>
+                  </a> */} 
                 </div>
               </div>
 
