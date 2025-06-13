@@ -61,7 +61,7 @@ const CareerHero = () => {
               transition={{ delay: 0.8 }}
             >
               <span className="stat-number">3+</span>
-              <span className="stat-label">Projecten</span>
+              <span className="stat-label">Projekte</span>
             </motion.div>
             <motion.div 
               className="stat-item"

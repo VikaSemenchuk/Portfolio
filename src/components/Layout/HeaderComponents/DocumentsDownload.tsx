@@ -8,7 +8,7 @@ const DocumentsDownload = () => {
     <div className="flex gap-6">
 
       <a
-        href="https://drive.google.com/file/d/1aLLC6eeCE27seZS7uUGr7bXT13kdzfsD/view?usp=drive_link"
+        href="https://drive.google.com/file/d/1hhTvgPK6XKlWFJprM-Vsiuwfd5icxYla/view?usp=drive_linkk"
         target="_blank"
         rel="noreferrer noopener"
         className="btn-control justify-start w-[240px] group hover:scale-105 focus-visible:ring-accent focus-visible:ring-2"
