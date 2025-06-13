@@ -52,7 +52,7 @@ const CareerHero = () => {
               transition={{ delay: 0.7 }}
             >
               <span className="stat-number">2+</span>
-              <span className="stat-label">Роки в ІТ</span>
+              <span className="stat-label">Jahren in ІТ</span>
             </motion.div>
             <motion.div 
               className="stat-item"
@@ -61,7 +61,7 @@ const CareerHero = () => {
               transition={{ delay: 0.8 }}
             >
               <span className="stat-number">3+</span>
-              <span className="stat-label">Проєктів</span>
+              <span className="stat-label">Projecten</span>
             </motion.div>
             <motion.div 
               className="stat-item"
@@ -70,7 +70,7 @@ const CareerHero = () => {
               transition={{ delay: 0.9 }}
             >
               <span className="stat-number">8+</span>
-              <span className="stat-label">Технологій</span>
+              <span className="stat-label">Technologien</span>
             </motion.div>
             <motion.div 
               className="stat-item"
@@ -79,7 +79,7 @@ const CareerHero = () => {
               transition={{ delay: 1.0 }}
             >
               <span className="stat-number">100%</span>
-              <span className="stat-label">Мотивації</span>
+              <span className="stat-label">Motivation</span>
             </motion.div>
           </div>
         </div>
