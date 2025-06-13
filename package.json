@@ -13,6 +13,8 @@
     "full-check": "npm run lint && npm run build && echo '✅ Build successful!' && npm run preview"
   },
   "dependencies": {
+    "@fontsource/inter": "^5.2.6",
+    "@fontsource/raleway": "^5.2.6",
     "@headlessui/react": "^2.2.3",
     "@heroicons/react": "^2.2.0",
     "framer-motion": "^12.12.1",

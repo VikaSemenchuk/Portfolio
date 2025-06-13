@@ -1,0 +1,79 @@
+{
+  "impressum": {
+    "title": "Legal Notice",
+    "subtitle": "Information according to § 5 DDG (Digital Services Act Germany)",
+    "provider": {
+      "title": "Website Owner",
+      "name": "Viktoriia Semenchuk",
+      "title_person": "Fullstack Developer",
+      "address": {
+        "street": "Gotenring 48",
+        "city": "50679 Cologne",
+        "country": "Germany"
+      },
+      "contact": {
+        "email": "viktoriia.semenchuk.dev@gmail.com",
+        "phone": "+49 1577 55 20 978"
+      }
+    },
+    "legal": {
+      "title": "Legal Information",
+      "responsibility": {
+        "title": "Responsibility for Content",
+        "content": "Viktoriia Semenchuk is responsible for all content on this website according to § 7 para.1 DDG."
+      },
+      "liability": {
+        "title": "Disclaimer",
+        "content": "Despite careful content control, I assume no liability for the content of external links. The operators of the linked pages are solely responsible for their content.",
+        "links": "The content of my pages has been created with the greatest care. However, I cannot guarantee the accuracy, completeness and timeliness of the content."
+      },
+      "copyright": {
+        "title": "Copyright",
+        "content": "The content and works created by the site operator on these pages are subject to German copyright law. Reproduction, editing, distribution and any kind of exploitation outside the limits of copyright require the written consent of the respective author or creator."
+      }
+    },
+    "dispute": {
+      "title": "Dispute Resolution",
+      "odr_platform": "The European Commission provides a platform for online dispute resolution (ODR): https://ec.europa.eu/consumers/odr",
+      "not_obligated": "I am not willing or obligated to participate in dispute resolution procedures before a consumer arbitration board."
+    },
+    "footer": "As of: June 2025 - All information complies with German law requirements."
+  },
+  "datenschutz": {
+    "title": "Privacy Policy",
+    "subtitle": "Information about the processing of your personal data according to GDPR",
+    "quick_info": {
+      "title": "Privacy at a Glance",
+      "content": "This website collects only minimally necessary data. Your personal data is treated confidentially and securely. You have the right to information, correction or deletion of your data at any time."
+    },
+    "overview": {
+      "title": "General Information",
+      "content": "The following notes provide a simple overview of what happens to your personal data when you visit this website. Personal data is all data that can be used to identify you personally.\n\nThis privacy policy was created in accordance with the General Data Protection Regulation (GDPR) and is regularly updated."
+    },
+    "responsible": {
+      "title": "Responsible Party",
+      "content": "The responsible party for data processing on this website is:\n\n<strong>Viktoriia Semenchuk</strong><br>\nGotenring 48<br>\n50679 Cologne<br>\nGermany<br><br>\nEmail: viktoriia.semenchuk.dev@gmail.com<br>\nPhone: +49 157 7552 0978<br><br>\nThe responsible party is the natural or legal person who alone or jointly with others determines the purposes and means of processing personal data."
+    },
+    "data_collection": {
+      "title": "Data Collection on This Website",
+      "content": "<strong>Automatic Data Collection:</strong><br>\nWhen visiting this website, information is automatically collected that your browser transmits:<br>\n• IP address<br>\n• Date and time of access<br>\n• Browser type and version<br>\n• Operating system<br>\n• Referrer URL<br><br>\n<strong>Legal basis:</strong> Art. 6 para. 1 lit. f GDPR (legitimate interests)<br>\n<strong>Purpose:</strong> Ensuring functionality and security of the website<br>\n<strong>Storage period:</strong> 7 days, then automatic deletion"
+    },
+    "hosting": {
+      "title": "Hosting and Content Delivery",
+      "content": "This website is hosted by an external service provider. The personal data collected on this website is stored on the host's servers.<br><br>\n<strong>Hosting provider:</strong> Netlify Inc.<br>\n<strong>Location:</strong> USA (with EU adequacy decision)<br>\n<strong>Legal basis:</strong> Art. 6 para. 1 lit. f GDPR<br><br>\nThe host will only process your data to the extent necessary to fulfill its service obligations and follow our instructions regarding this data."
+    },
+    "contact_form": {
+      "title": "Contact Form and Email Contact",
+      "content": "<strong>If you contact me via contact form or email:</strong><br>\n• Name<br>\n• Email address<br>\n• Message content<br>\n• Time of request<br><br>\n<strong>Legal basis:</strong> Art. 6 para. 1 lit. b GDPR (contract preparation) or Art. 6 para. 1 lit. f GDPR (legitimate interests)<br>\n<strong>Purpose:</strong> Processing your request and communication<br>\n<strong>Storage period:</strong> Until complete processing of your request, then deletion after 2 years<br><br>\nData transmission is encrypted via HTTPS."
+    },
+    "rights": {
+      "title": "Your Rights as Data Subject",
+      "content": "You have the following rights regarding your personal data:<br><br>\n<strong>• Right of access</strong> (Art. 15 GDPR)<br>\n<strong>• Right to rectification</strong> (Art. 16 GDPR)<br>\n<strong>• Right to erasure</strong> (Art. 17 GDPR)<br>\n<strong>• Right to restriction of processing</strong> (Art. 18 GDPR)<br>\n<strong>• Right to data portability</strong> (Art. 20 GDPR)<br>\n<strong>• Right to object</strong> (Art. 21 GDPR)<br><br>\n<strong>Right to complain:</strong> You have the right to file a complaint with a data protection supervisory authority if you believe that the processing of your data is unlawful.<br><br>\nCompetent supervisory authority:<br>\nState Commissioner for Data Protection and Freedom of Information North Rhine-Westphalia<br>\nKavalleriestraße 2-4<br>\n40213 Düsseldorf"
+    },
+    "contact": {
+      "title": "Contact for Privacy Questions",
+      "content": "For questions about data protection or to exercise your rights, you can contact me at any time:"
+    },
+    "last_updated": "Last updated: June 2025"
+  }
+}

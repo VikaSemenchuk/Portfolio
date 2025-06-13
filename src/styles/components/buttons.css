@@ -1,21 +1,27 @@
 @layer components {
+  .btn, .btn-control, .btn-secondary {
+   @apply  min-w-[70px] lg:min-w-[140px]
+            h-12 md:h-[2.5rem] lg:h-[3.5rem]
+           text-xs md:text-sm lg:text-base;
+}
+
   .btn {
     @apply flex gap-0.5 justify-center items-center bg-accent text-background px-4 py-3 rounded-full font-medium 
            hover:bg-accent-hover hover:scale-105 focus:outline-none focus:ring-2 
            focus:ring-accent focus:ring-opacity-50 active:scale-95 transition-all
-           min-w-[100px] max-w-[280px] h-10 md:h-[2.5rem]
+           /* min-w-[100px] max-w-[280px] h-10 md:h-[2.5rem] */
            text-sm md:text-base;
   }
 
   .btn-control {
     @apply flex items-center justify-center
-     h-[2.5rem] 
+     /* h-[2.5rem]  */
            bg-surface text-text px-2 py-1.5 md:px-3 md:py-2 rounded-full
             shadow-sm border border-border
            hover:border-accent hover:text-accent focus:outline-none focus:ring-2 
            focus:ring-accent focus:ring-opacity-50 transition-all
-           min-w-[70px] lg:min-w-[140px]
-            h-8 lg:h-[2.5rem]
+           /* min-w-[70px] lg:min-w-[140px] */
+            /* h-10 lg:h-[2.5rem] */
            text-xs md:text-sm lg:text-base;
   }
 
@@ -25,6 +31,6 @@
            border border-border hover:border-accent
            focus:outline-none focus:ring-2 focus:ring-accent focus:ring-opacity-50 
            transition-all duration-200
-           min-w-[40px] h-9 md:h-10;
+           /* min-w-[40px] h-8 md:h-10 lg:h-[2.5rem]; */
   }
 }

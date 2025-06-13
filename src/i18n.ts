@@ -9,6 +9,7 @@ import enNewsProject from '@/locales/en/projects/news.json';
 import enImagesProject from '@/locales/en/projects/images.json';
 import enMoviesProject from '@/locales/en/projects/movies.json';
 import enCareer from '@/locales/en/career.json';
+import enLegal from '@/locales/en/legal.json';
 
 
 import ukCommon from '@/locales/uk/common.json';
@@ -19,6 +20,7 @@ import ukNewsProject from '@/locales/uk/projects/news.json';
 import ukImagesProject from '@/locales/uk/projects/images.json';
 import ukMoviesProject from '@/locales/uk/projects/movies.json';
 import ukCareer from '@/locales/uk/career.json';
+import ukLegal from '@/locales/uk/legal.json';
 
 
 import deCommon from '@/locales/de/common.json';
@@ -29,6 +31,7 @@ import deNewsProject from '@/locales/de/projects/news.json';
 import deImagesProject from '@/locales/de/projects/images.json';
 import deMoviesProject from '@/locales/de/projects/movies.json';
 import deCareer from '@/locales/de/career.json';
+import deLegal from '@/locales/de/legal.json';
 import { getStoredValue } from '@/utils';
 
 const currentLanguage = getStoredValue('language', ['en', 'uk', 'de'], 'en');
@@ -45,7 +48,8 @@ i18n
         newsProject: enNewsProject,
         imagesProject: enImagesProject,
         moviesProject: enMoviesProject,  
-        career: enCareer
+        career: enCareer,
+        legal: enLegal
       },
       uk: {
         common: ukCommon,
@@ -55,7 +59,8 @@ i18n
         newsProject: ukNewsProject,
         imagesProject: ukImagesProject,
         moviesProject: ukMoviesProject,
-        career: ukCareer
+        career: ukCareer,
+        legal: ukLegal
       },
       de: {
         common: deCommon,
@@ -65,7 +70,8 @@ i18n
         newsProject: deNewsProject,
         imagesProject: deImagesProject,
         moviesProject: deMoviesProject,
-        career: deCareer
+        career: deCareer,
+        legal: deLegal
       }
     },
     fallbackLng: 'en',

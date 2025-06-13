@@ -9,6 +9,9 @@ const LazyAboutPage = lazy(() => (import("@/pages/AboutPage")))
 const LazyProjectsPage = lazy(() => (import("@/pages/ProjectsPage")))
 const LazyProjectDetailPage = lazy(() => import("@/pages/ProjectDetailsPage"));
 const LazyCareerPathPage = lazy(() => (import("@/pages/CareerPathPage")))
+const LazyImpressumPage = lazy(() => import("@/pages/ImpressumPage"));
+const LazyDatenschutzPage = lazy(() => import("@/pages/DatenschutzPage"));
+
 
 const RoutesComponent = () => {
   return (
@@ -19,6 +22,8 @@ const RoutesComponent = () => {
         <Route path="projects" element={<LazyProjectsPage />} />
         <Route path="projects/:id" element={<LazyProjectDetailPage />} />
         <Route path="path-to-it" element={<LazyCareerPathPage />} />
+         <Route path="impressum" element={<LazyImpressumPage />} />
+        <Route path="datenschutz" element={<LazyDatenschutzPage />} />
       </Route>
       <Route path="*" element={<NotFoundPage />} />
     </Routes>
