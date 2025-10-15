@@ -2,13 +2,15 @@ import { useTranslation } from "react-i18next";
 import { FileText } from "lucide-react";
 
 const DocumentsDownload = () => {
-  const { t: tCommon } = useTranslation('common')
+  const { t: tCommon } = useTranslation('common');
+  const { t: tPages } = useTranslation('pages');
 
   return (
     <>
 
       <a
-        href="https://drive.google.com/file/d/1hhTvgPK6XKlWFJprM-Vsiuwfd5icxYla/view?usp=drive_link"
+        // href="https://drive.google.com/file/d/1-QvxGIJG8U_Ro_pmAEOr7A3ln54M6JOi/view?usp=drive_link"
+        href={tPages("home.hero.cv")}
         target="_blank"
         rel="noreferrer noopener"
         className="btn-control justify-start w-[240px] group hover:scale-105 focus-visible:ring-accent focus-visible:ring-2"
