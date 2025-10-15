@@ -4,15 +4,12 @@ import { FileText } from "lucide-react";
 const DocumentsDownload = () => {
   const { t: tCommon } = useTranslation('common');
   const { t: tPages } = useTranslation('pages');
-  const cv = tPages("home.hero.cv") as string
-  // console.log(cv)
+  
   return (
     <>
 
       <a
-        // href="https://drive.google.com/file/d/1-QvxGIJG8U_Ro_pmAEOr7A3ln54M6JOi/view?usp=drive_link"
-        // href={tPages("home.hero.cv")}
-        href={cv}
+        href={tPages("home.hero.cv")}
         target="_blank"
         rel="noreferrer noopener"
         className="btn-control justify-start w-[240px] group hover:scale-105 focus-visible:ring-accent focus-visible:ring-2"

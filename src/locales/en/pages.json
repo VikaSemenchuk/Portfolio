@@ -3,7 +3,8 @@
     "hero": {
       "title": "Fullstack developer with an engineering mindset",
       "subtitle": "With an analytical background, I've transitioned from finance to development. I work with JavaScript, TypeScript, React, and Node.js to build meaningful solutions.",
-      "photoAlt": "Photo of Viktoriia, web developer"
+      "photoAlt": "Photo of Viktoriia, web developer",
+      "cv": "https://drive.google.com/file/d/1-QvxGIJG8U_Ro_pmAEOr7A3ln54M6JOi/view?usp=drive_link"
     }
   },
   "about": {
